@@ -1,0 +1,39 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tree-dvips}
+\usepackage{times}
+\pagestyle{empty}
+
+
+
+
+\begin{document}
+\textit{
+\begin{tabular}[t]{@{}cccc@{}}
+\multicolumn{4}{c}{\node{a}{sform}}\\[4ex]
+\multicolumn{2}{c}{\node{b}{focality}} & \multicolumn{2}{c}{\node{c}{topicality}}\\[4ex]
+\node{d}{narrow-focus} & \node{e}{wide-focus} & \node{f}{topicless} & \node{g}{topic-comment} \\[4ex]
+\node{h}{focus-bg} & \node{i}{all-focus} & \node{j}{frame-setting} & \node{k}{non-frame-setting} \\[4ex]
+\end{tabular}}
+\nodeconnect{a}{b}
+\nodeconnect{a}{c}
+
+\nodeconnect{b}{d}
+\nodeconnect{b}{e}
+
+\nodeconnect{c}{f}
+\nodeconnect{c}{g}
+
+\nodeconnect{d}{h}
+\nodeconnect{e}{i}
+
+\nodeconnect{f}{h}
+\nodeconnect{f}{i}
+
+\nodeconnect{g}{j}
+\nodeconnect{g}{k}
+
+\end{document}
+
+

@@ -1,0 +1,21 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+Who \& \textsc{comes}?\\
+\end{deptext}
+
+\deproot[edge below, edge unit distance=1ex]{2}{\textit{focus}}
+\depedge[edge unit distance=2ex]{2}{1}{\textit{semantic-focus}}
+
+\end{dependency}
+
+\end{document}
+

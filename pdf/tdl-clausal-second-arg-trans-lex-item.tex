@@ -1,0 +1,21 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+clausal-second-arg-trans-lex-item := basic-two-arg & 
+                                     one-icons-lex-item &
+  [ ARG-ST < [ LOCAL.CONT.HOOK [ INDEX ref-ind & #ind,
+                                 ICONS-KEY.CLAUSE #clause ] ],
+             [ LOCAL.CONT.HOOK [ LTOP #larg, 
+                                 INDEX #target ] ] >,
+    SYNSEM [ LOCAL.CONT [ HOOK.CLAUSE-KEY #clause,
+                          HCONS <! qeq & [ HARG #harg, 
+                                           LARG #larg ] !>,
+                          ICONS <! [ CLAUSE #clause, 
+                                     TARGET #target ] !> ],
+             LKEYS.KEYREL [ ARG1 #ind, ARG2 #harg ] ] ].
+\end{verbatim}}
+
+\end{document}

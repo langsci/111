@@ -1,0 +1,21 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+infostr-marking-determiner-lex := basic-determiner-lex &
+                                  one-icons-lex-item & 
+  [ SYNSEM.LOCAL [ CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK
+                     [ INDEX #target,
+                       ICONS-KEY #icons ],
+                   CONT.ICONS 
+                     <! info-str & #icons & [ TARGET #target] !> ] ].
+
+def-pst-determiner-lex := determiner-lex & 
+                          infostr-marking-determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.ICONS-KEY 
+      contrast-topic ].
+\end{verbatim}}
+
+\end{document}

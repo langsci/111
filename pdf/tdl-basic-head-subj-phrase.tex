@@ -1,0 +1,27 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+basic-head-subj-phrase := head-valence-phrase & head-compositional & 
+                          basic-binary-headed-phrase & no-ccont-rule &
+  [ SYNSEM phr-synsem & 
+                   [ LOCAL.CAT [ POSTHEAD +,
+                                 HC-LIGHT -,
+                                 VAL [ SUBJ < >,
+                                       COMPS #comps,
+                                       SPR #spr ] ] ],
+        HEAD-DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < #synsem >,
+                                        COMPS #comps,        
+                                        SPR #spr ],
+        NON-HEAD-DTR.SYNSEM #synsem & canonical-synsem &
+                   [ LOCAL [ CAT [ VAL [ SUBJ olist,
+                                         COMPS olist,
+                                         SPR olist ] ] ],
+                         NON-LOCAL [ SLASH 0-dlist & [ LIST < > ],
+                                     REL 0-dlist,
+                                     QUE 0-dlist ] ]].
+\end{verbatim}}
+
+\end{document}

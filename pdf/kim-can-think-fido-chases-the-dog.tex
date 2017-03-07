@@ -1,0 +1,20 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+\textbf{Kim} \& can \& think \& Fido \& chases \& the \& \textsc{dog}. \\
+\end{deptext}
+\depedge[edge unit distance=2ex]{2}{1}{\textit{contrast-or-topic}}
+\depedge[edge below, edge unit distance=.5ex]{2}{5}{\textit{info-str}}
+\depedge[edge unit distance=1ex]{5}{7}{\textit{semantic-focs}}
+\end{dependency}
+
+\end{document}
+

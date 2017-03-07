@@ -1,0 +1,25 @@
+\documentclass[a4paper]{article}
+
+\usepackage{tree-dvips}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+\begin{tabular}[t]{ccccccc}
+\multicolumn{3}{c}{\node{a}{--New}} & & \multicolumn{3}{c}{\node{b}{+New}} \\[4ex]
+\node{c}{Topic} & & \node{d}{Tail} & & \node{e}{Contrastive Focus} & &  \node{f}{Completive Focus} \\[4ex]
+\multicolumn{3}{c}{\node{g}{+Prom}} & & \multicolumn{3}{c}{\node{h}{--Prom}} \\
+\end{tabular}
+
+\nodeconnect{a}{c}
+\nodeconnect{a}{d}
+
+\nodeconnect{b}{e}
+\nodeconnect{b}{f}
+
+\nodeconnect{c}{g}
+\nodeconnect{d}{h}
+\nodeconnect{e}{g}
+\nodeconnect{f}{h}
+
+\end{document}

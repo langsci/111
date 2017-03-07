@@ -1,0 +1,19 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+\textbf{Kim} \& sees \& the \& dog \& that \& barks. \\
+\end{deptext}
+\depedge[edge unit distance=2ex]{2}{1}{\textit{contrast-or-topic}}
+\depedge[edge below, edge unit distance=1ex]{6}{4}{\textit{\textbf{focus-or-topic}}}
+\end{dependency}
+
+\end{document}
+

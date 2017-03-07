@@ -1,0 +1,22 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+The \& \textsc{big} \& dog \& barks.\\
+\end{deptext}
+
+%\deproot[edge unit distance=1ex]{4}{\textit{info-str}}
+%\depedge[edge below, edge unit distance=3ex]{4}{3}{\textit{info-str}}
+\depedge[edge unit distance=1ex]{4}{2}{\textit{semantic-focus}}
+
+\end{dependency}
+
+\end{document}
+

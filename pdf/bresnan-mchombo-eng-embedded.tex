@@ -1,0 +1,20 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tree-dvips}
+\usepackage{times}
+\usepackage{xspace}
+\pagestyle{empty}
+
+
+
+\begin{document}
+
+\begin{tabular}{@{}l@{}l@{}l@{}l@{}l}
+I know [ \xspace	& what		\xspace	& you want \xspace	& \_\_\_ \xspace		& ]. \\
+			& \node{a}{\textsc{focus}}	&					& \node{b}{\textsc{obj}} \\
+\end{tabular}
+\barnodeconnect[-5pt]{b}{a}
+
+
+\end{document}

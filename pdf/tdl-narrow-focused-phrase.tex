@@ -1,0 +1,26 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+narrow-focused-phrase := head-only & no-rels-hcons-rule &
+  [ C-CONT [ HOOK #hook,
+             ICONS <! focus-or-topic & #icons &
+                      [ TARGET #target ] !> ],
+    SYNSEM [ LIGHT -,
+             INFOSTR-FLAG +,
+             LOCAL [ CAT.VAL [ SPR < >, 
+                               SUBJ < >,
+                               COMPS < >, 
+                               SPEC < > ],
+                     CONT.HOOK [ INDEX #target,
+                                 ICONS-KEY #icons ] ] ],
+    HEAD-DTR.SYNSEM [ LIGHT -,
+                      INFOSTR-FLAG -,
+                      LOCAL [ CAT.HEAD noun,
+                              CONT [ HOOK #hook,
+                                     ICONS <! !> ] ] ] ].
+\end{verbatim}}
+
+\end{document}

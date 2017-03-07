@@ -1,0 +1,59 @@
+\documentclass[a1paper]{article}
+
+
+\usepackage{qtree}
+\usepackage{avm}
+\usepackage{xspace}
+\usepackage[left=0cm,right=0cm,top=1cm,bottom=1cm,a1paper]{geometry}
+\pagestyle{empty}
+
+
+\begin{document}
+\leaf{Kim}
+\branch{1}{NP \vspace{-10pt} \\ \begin{avm}
+\@{4}\[ MKG & {\it mkg} \\
+   ICONS & \<!  !\> \]
+\end{avm}}
+\leaf{sent}
+\branch{1}{V \vspace{-10pt} \\ \begin{avm}
+\[ INDEX & \@{3} \\
+   MKG & {\it mkg} \\
+   COMPS & \< \@{7}, \[ MKG\|FC +\\
+                        ICONS \<! \[ {\it semantic-focus} \] \xspace \xspace !\> \] \> \\
+   ICONS & \<! \@{1}\[ {\it non-focus} \\ 
+		TARGET & \@{8} \] \xspace \xspace !\> \]
+\end{avm}}
+\leaf{Lee}
+\branch{1}{NP \vspace{-10pt} \\ \begin{avm}
+\@{7}\[ MKG & {\it mkg} \\
+   INDEX & \@{8} \\
+   ICONS & \<!  !\> \]
+\end{avm}}
+\branch{2}{VP \\
+\begin{avm}
+\[ {\it head-comp} \\
+INDEX & \@{3} \\
+  COMPS & \< \@{5} \> \\
+     ICONS & \<! \@{1} \xspace \xspace !\> \]
+\end{avm}}
+\leaf{the \textsc{book}}
+\branch{1}{NP \vspace{-10pt} \\ \begin{avm}
+\@{5}\[ INDEX & \@{6} \\
+MKG & {\it fc-only} \\ 
+ICONS & \<! \@{2}\[ {\it semantic-focus} \\ 
+                     TARGET & \@{6} \] \xspace \xspace !\> \]
+\end{avm}}
+\branch{2}{VP \vspace{-10pt} \\
+\begin{avm}
+\[ {\it head-comp} \\
+  SUBJ & \< \@{4} \> \\
+     ICONS & \<! \@{1}, \@{2} \xspace \xspace !\> \]
+\end{avm}}
+\branch{2}{S \vspace{-10pt} \\
+\begin{avm}
+\[ {\it head-subj} \\
+   ICONS \<! \@{1}\[ CLAUSE & \@{3} \], \@{2}\[ CLAUSE & \@{3} \] !\> \]
+\end{avm}}
+\qobitree
+
+\end{document}

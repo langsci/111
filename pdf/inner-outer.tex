@@ -1,0 +1,26 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tree-dvips}
+\usepackage{times}
+\usepackage{xspace}
+\pagestyle{empty}
+
+
+
+\begin{document}
+
+
+\begin{tabular}{@{}l@{}l@{}l@{}l@{}l@{}l@{}l@{}l@{}l@{}l@{}l@{}l@{}l}
+\node{c}{`` \xspace} & \node{a}{The \xspace} & name \xspace & is \xspace & familiar \xspace & to \xspace & me \xspace & \node{b}{, \xspace} & '' \xspace & \xspace & said \xspace & he \xspace & \node{d}{.} \\
+
+& \multicolumn{7}{c}{\textsc{inner frame}} \\
+\multicolumn{12}{c}{\textsc{outer frame}} \\
+\end{tabular}
+
+\barnodeconnect[-3pt]{a}{b}
+\barnodeconnect[-15pt]{c}{d}
+
+
+
+\end{document}

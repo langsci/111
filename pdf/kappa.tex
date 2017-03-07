@@ -1,0 +1,80 @@
+\documentclass[a4paper]{article}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{patterns}
+
+\pgfplotsset{compat=1.4} 
+\pagestyle{empty}
+
+\definecolor{bblack}{HTML}{111111}
+\definecolor{wwhite}{HTML}{C8C8C8}
+
+\makeatletter
+\tikzset{nomorepostaction/.code=\let\tikz@postactions\pgfutil@empty}
+\makeatother
+
+
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        width=6in,
+	height=4in,
+        major x tick style = transparent,
+        ybar=2*\pgflinewidth,
+        ymajorgrids = true,
+        symbolic x coords={101,102,103,104,105,106,107,108,109,110},
+        xtick = data,
+        scaled y ticks = false,
+        enlarge x limits=0.1,
+	ymin=0, ymax=1,
+        legend cell align=left,
+        legend style={
+                at={(0.99,0.01)},
+                anchor=south east,
+                column sep=1ex
+        }
+    ]
+  \addplot[style={bar width=0.12in,fill=bblack,draw=black}]
+            coordinates {	(101,0.8563)
+				(102,0.8733)
+				(103,0.9713)
+				(104,0.7471)
+				(105,0.8635)
+				(106,0.9530)
+				(107,0.8832)
+				(108,0.7562)
+				(109,0.7744)
+				(110,0.7202)	    };
+%\addplot[style={bar width=0.12in,fill=white,draw=black}]
+  \addplot[style={bar width=0.12in,fill=white,every path/.style={postaction={nomorepostaction,pattern=north east lines, pattern color=black}},draw=black}]
+            coordinates {	(101,0.7651)
+				(102,0.8246)
+				(103,0.9007)
+				(104,0.8477)
+				(105,0.8777)
+				(106,0.7243)
+				(107,0.9070)
+				(108,0.9454)
+				(109,0.6861)
+				(110,0.6902)	    };
+  \addplot[style={bar width=0.12in,fill=wwhite,draw=black}]
+            coordinates {	(101,0.9501)
+				(102,0.8613)
+				(103,0.9166)
+				(104,0.9674)
+				(105,0.8230)
+				(106,0.8180)
+				(107,0.7961)
+				(108,0.9161)
+				(109,0.7076)
+				(110,0.7618)       };
+ \legend{Spanish,Russian,Korean}
+ \end{axis}
+\end{tikzpicture}
+\end{document}
+
+
+
+

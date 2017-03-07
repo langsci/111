@@ -1,0 +1,23 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+The \& dog \& that \& \textsc{Kim} \& saw \& barked. \\
+\end{deptext}
+\depedge{5}{4}{\textit{focus}}
+\deproot[edge unit distance=1.5ex]{5}{\textit{info-str}}
+\deproot[edge unit distance=1.5ex]{6}{\textit{info-str}}
+\depedge[edge below, edge unit distance=0.7ex]{5}{2}{\textit{info-str}}
+\depedge[edge below, edge unit distance=1ex]{6}{2}{\textit{non-focus}}
+\end{dependency}
+
+\end{document}
+

@@ -1,0 +1,22 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tree-dvips}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+\textit{
+\begin{tabular}[t]{@{}ccc@{}}
+\multicolumn{3}{c}{\node{a}{clause}}\\[4ex]
+\node{b}{non-rel-clause} &  & \node{c}{rel-clause} \\[4ex]
+\node{d}{declarative-clause} & \node{e}{interrogative-clause} & \node{f}{imperative-clause} \\[4ex]
+\end{tabular}}
+\nodeconnect{a}{b}
+\nodeconnect{a}{c}
+\nodeconnect{b}{d}
+\nodeconnect{b}{e}
+\nodeconnect{b}{f}
+
+\end{document}
+

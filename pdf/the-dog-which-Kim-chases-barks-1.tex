@@ -1,0 +1,24 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+The \& dog \& that \& Kim \& chases \& barks.\\
+\end{deptext}
+
+%\deproot[edge unit distance=1ex]{5}{\textit{info-str}}
+%\deproot[edge unit distance=1ex]{6}{\textit{info-str}}
+%\depedge[edge below, edge unit distance=2ex]{5}{4}{\textit{info-str}}
+\depedge[edge unit distance=.5ex]{5}{2}{\textit{\textbf{focus-or-topic}}}
+%\depedge[edge below, edge unit distance=1.3ex]{6}{2}{\textit{info-str}}
+
+\end{dependency}
+
+\end{document}
+

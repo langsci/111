@@ -1,0 +1,18 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+basic-non-rel-clause := clause & head-compositional & 
+  [ SYNSEM.NON-LOCAL.REL 0-dlist,
+    HEAD-DTR.SYNSEM [ LOCAL.CONT.HOOK [ INDEX #index,
+                                        ICONS-KEY.CLAUSE #index,
+                                        CLAUSE-KEY #index ],
+                      NON-LOCAL [ QUE 0-dlist,
+                                  REL 0-dlist ] ],
+    C-CONT [ RELS <! !>,
+             HCONS <! !> ] ].
+\end{verbatim}}
+
+\end{document}

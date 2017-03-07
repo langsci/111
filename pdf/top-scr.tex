@@ -1,0 +1,30 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tree-dvips}
+\usepackage{times}
+\usepackage{xspace}
+\pagestyle{empty}
+
+\begin{document}
+\textit{
+\begin{tabular}[t]{@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}}
+& \node{a}{head-subj-phrase} &  \multicolumn{3}{c}{\node{b}{topic-comment}} & \node{c}{head-comp-phrase} \\[4ex]
+\node{d}{subj-head} & \node{e}{top-subj-head} & \node{f}{top-scr-subj-head \xspace } & & \node{g}{ \xspace  top-scr-comp-head} & \node{h}{top-comp-head} & \node{i}{comp-head}  \\[4ex]
+\end{tabular}}
+\nodeconnect{a}{d}
+\nodeconnect{a}{e}
+\nodeconnect{a}{f}
+
+\nodeconnect{b}{e}
+\nodeconnect{b}{f}
+\nodeconnect{b}{g}
+\nodeconnect{b}{h}
+
+\nodeconnect{c}{g}
+\nodeconnect{c}{h}
+\nodeconnect{c}{i}
+
+
+\end{document}
+

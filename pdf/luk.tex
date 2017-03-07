@@ -1,0 +1,27 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tree-dvips}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+\textit{
+\begin{tabular}[t]{@{}ccc@{}}
+& \node{a}{luk}\\[2ex]
+\node{b}{na-or-${-}$} & \node{c}{bool} & \node{d}{na-or-+} \\[4ex]
+\node{f}{${-}$} & \node{g}{na} & \node{h}{+} \\[4ex]
+\end{tabular}}
+
+\nodeconnect{a}{b}
+\nodeconnect{a}{c}
+\nodeconnect{a}{d}
+\nodeconnect{b}{f}
+\nodeconnect{b}{g}
+\nodeconnect{c}{f}
+\nodeconnect{c}{h}
+\nodeconnect{d}{g}
+\nodeconnect{d}{h}
+
+\end{document}
+

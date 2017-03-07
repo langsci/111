@@ -1,0 +1,49 @@
+
+\documentclass[a4paper]{article}
+
+
+\usepackage{relsize}
+\usepackage{qtree}
+\usepackage{avm}
+\usepackage[usenames]{color}
+\pagestyle{empty}
+\newcommand{\myred}[1]{\textcolor{RubineRed}{#1}}
+\newcommand{\myblue}[1]{\textcolor{Cyan}{#1}}
+
+
+\begin{document}
+
+
+\begin{avm}
+\[ \avmspan{\it mrs}	\\
+LTOP & \@{h1}\ 	\\ 
+INDEX & \@{e2}\ 	\\ 
+RELS & \<
+		\[ \avmspan{\it \_inu\_n\_rel}	\\
+		LBL & \@{h3}\ 	\\ 
+		ARG0 & \myblue{\@{{\bf x4}}}\ 	\\ \], 
+		\[ \avmspan{\it exist\_q\_rel}	\\
+		LBL & \@{h5}\ 	\\ 
+		ARG0 & \myblue{\@{{\bf x4}}}\ 	\\ 
+		RSTR & \@{h6}\ 	\\ 
+		BODY & \@{h7}\ 	\\ \], 
+		\[ \avmspan{\it \_hoeru\_v\_rel}	\\
+		LBL & \@{h8}\ 	\\ 
+		ARG0 & \@{e2}\ 	\\ 
+		ARG1 & \myblue{\@{{\bf x4}}}\ 	\\ \]\>	\\ 
+HCONS & \<
+		\[ \avmspan{\it qeq}	\\
+		HARG & \@{h6}\ 	\\ 
+		LARG & \@{h3}\ 	\\ \]\>	\\
+ICONS & \<
+		\[ \avmspan{\it non-topic}	\\
+		CLAUSE & \@{e2}\ 	\\ 
+		TARGET & \myblue{\@{{\bf x4}}}\ 	\\ \],  
+		\[ \avmspan{\it info-str}	\\
+		CLAUSE & \@{e2}\ 	\\ 
+		TARGET & \@{e2}\ 	\\ \] \> \\ \]
+\end{avm}
+
+\end{document}
+
+

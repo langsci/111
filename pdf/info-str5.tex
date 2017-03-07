@@ -1,0 +1,53 @@
+\documentclass[a1paper]{article}
+
+\usepackage[left=0cm,right=0cm,top=1cm,bottom=1cm,a4paper]{geometry}
+
+\usepackage{tree-dvips}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+\textit{
+\begin{tabular}[t]{@{}cccccc@{}}
+& & \node{a}{info-str} \\[5ex]
+\node{b}{non-topic} & \node{c}{contrast-or-focus} & \node{d}{focus-or-topic} & \node{e}{contrast-or-topic} & \node{f}{non-focus}    \\[5ex]
+\node{g}{focus} & & \node{h}{contrast} & & \node{i}{topic}    \\[5ex]
+\node{j}{semantic-focus} & \node{k}{contrast-focus} & \node{l}{bg} & \node{m}{contrast-topic} & \node{n}{aboutness-topic} \\[5ex]
+& &  & \node{o}{frame-setting-topic} &  & \\[5ex]
+\end{tabular}}
+
+\nodeconnect{a}{b}
+\nodeconnect{a}{c}
+\nodeconnect{a}{d}
+\nodeconnect{a}{e}
+\nodeconnect{a}{f}
+
+\nodeconnect{b}{g}
+\nodeconnect{b}{l}
+
+\nodeconnect{c}{g}
+\nodeconnect{c}{h}
+
+\nodeconnect{d}{g}
+\nodeconnect{d}{h}
+\nodeconnect{d}{i}
+
+\nodeconnect{e}{h}
+\nodeconnect{e}{i}
+
+\nodeconnect{f}{i}
+\nodeconnect{f}{l}
+
+\nodeconnect{g}{j}
+\nodeconnect{g}{k}
+
+\nodeconnect{h}{k}
+\nodeconnect{h}{m}
+
+\nodeconnect{i}{m}
+\nodeconnect{i}{n}
+
+\nodeconnect{m}{o}
+
+\end{document}
+

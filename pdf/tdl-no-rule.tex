@@ -1,0 +1,19 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+
+no-icons-lex-item := lex-item & 
+  [ SYNSEM.LOCAL [ CAT.MKG [ FC na, TP na ],
+                   CONT.ICONS <! !> ] ].
+basic-icons-lex-item := lex-item &
+  [ SYNSEM.LOCAL.CONT.ICONS <! !> ].
+one-icons-lex-item := lex-item &
+  [ SYNSEM.LOCAL.CONT.ICONS <! info-str & [ ] !> ].
+two-icons-lex-item := lex-item &
+  [ SYNSEM.LOCAL.CONT.ICONS <! info-str & [ ], info-str & [ ] !> ].
+\end{verbatim}}
+
+\end{document}

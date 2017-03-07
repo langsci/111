@@ -1,0 +1,28 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{relsize}
+\usepackage{qtree}
+\usepackage{xspace}
+
+\usepackage{avm}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\noindent {\it nom-lex-rule} \ensuremath{\rightarrow} \\
+\begin{avm}
+\[ INFOSTR-FLAG & + \\
+CASE & {\it nom} \\
+    MKG & {\it unmkg} \\ 
+    INDEX & \@{1} \\ 
+    ICONS-KEY & \@{2} \\
+    C-CONT\|ICONS & \<! \@{2}\[ {\it non-topic} \\
+                            TARGET \@{1} \] \xspace \xspace !\> \\ 
+    DTR & \[ INFOSTR-FLAG -- \] \\ \]	
+
+\end{avm}
+
+
+\end{document}

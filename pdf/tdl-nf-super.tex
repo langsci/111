@@ -1,0 +1,14 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+head-nf-comp-phrase-super := basic-head-comp-phrase & 
+                             narrow-focus &
+  [ SYNSEM.LOCAL.CAT [ MC -, VAL.COMPS #comps ],
+    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < #synsem . #comps >,
+    NON-HEAD-DTR.SYNSEM #synsem & [ INFOSTR-FLAG + ] ].
+\end{verbatim}}
+
+\end{document}

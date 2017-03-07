@@ -1,0 +1,49 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{relsize}
+\usepackage{qtree}
+\usepackage{avm}
+\usepackage[usenames]{color}
+\pagestyle{empty}
+\newcommand{\myred}[1]{\textcolor{RubineRed}{#1}}
+\newcommand{\myblue}[1]{\textcolor{Cyan}{#1}}
+
+
+\begin{document}
+
+\leaf{inu}
+\branch{1}{N  \\
+\begin{avm}
+\[ INDEX \@{5} \\
+   I-KEY\ensuremath{\mid}CLAUSE \myred{\@{{\bf 4}}} \\
+   ICONS \< \@{1}\[ {\it non-topic} \\
+      CLAUSE & \myred{\@{{\bf 4}}} \\ 
+	  TARGET & \@{5} \\ \] \> \]
+\end{avm}}
+\leaf{ga}
+\branch{1}{P \\
+\begin{avm}
+\[ I-KEY \myblue{\@{{\bf 3}}} \\
+   C-KEY \myred{\@{{\bf 4}}} \]
+\end{avm}}
+\branch{2}{PP \\
+\begin{avm}
+\[ I-KEY \myblue{\@{{\bf 3}}}\[ CLAUSE \myred{\@{{\bf 4}}}\] \] 
+\end{avm}}
+\leaf{hoeru}
+\branch{1}{V  \\
+\begin{avm}
+\[ INDEX \myred{\@{{\bf 4}}} \\
+   ICONS \< \@{2}\[ {\it info-str} \\
+      CLAUSE & \myred{\@{{\bf 4}}} \\ 
+	  TARGET & \myred{\@{{\bf 4}}} \\ \] \> \]
+\end{avm}}
+\branch{2}{S \\
+\begin{avm}
+\[ ICONS \< \@{1}, \@{2} \> \]
+\end{avm}}
+\qobitree
+
+\end{document}
+

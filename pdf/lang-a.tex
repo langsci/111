@@ -1,0 +1,38 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{relsize}
+\usepackage{qtree}
+\usepackage{avm}
+\usepackage[usenames]{color}
+\pagestyle{empty}
+\newcommand{\myred}[1]{\textcolor{RubineRed}{#1}}
+\newcommand{\myblue}[1]{\textcolor{Cyan}{#1}}
+
+
+\begin{document}
+
+\leaf{\begin{avm}
+subj
+\[ MKG {\it mkg} \\ \] 
+\end{avm}}
+\leaf{\begin{avm}
+obj
+\[ MKG {\it fc} \\ \] 
+\end{avm}}
+\leaf{\begin{avm}
+verb
+\[ MKG {\it unmkg} \\ \] 
+\end{avm}}
+\branch{2}{\begin{avm}
+VP
+\[ {\it narrow-focus} \\ 
+    MKG {\it fc-only} \\ \] 
+\end{avm}}
+\branch{2}{\begin{avm}
+S 
+\[ MKG {\it mkg} \\ \] 
+\end{avm}}
+\qobitree
+
+\end{document}

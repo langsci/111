@@ -1,0 +1,22 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+\textsc{Kim} \& thinks \& that \& the \& dog \& barks. \\
+\end{deptext}
+%\deproot[edge below, edge unit distance=1.2ex]{2}{\textit{info-str}}
+%\deproot[edge below, edge unit distance=1.2ex]{6}{\textit{info-str}}
+\depedge{6}{5}{\textit{info-str}}
+\depedge{2}{1}{\textit{semantic-focus}}
+\depedge[edge below, edge unit distance=.5ex]{2}{6}{\textit{\textbf{info-str}}}
+\end{dependency}
+
+\end{document}
+

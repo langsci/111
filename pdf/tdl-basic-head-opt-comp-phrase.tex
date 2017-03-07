@@ -1,0 +1,39 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+basic-head-opt-comp-phrase := head-valence-phrase & head-only &
+                              head-compositional &
+  [ INFLECTED #infl,
+    SYNSEM canonical-synsem &
+              [ LOCAL.CAT [ VAL [ SUBJ #subj,
+                                  COMPS #comps,
+                                  SPR #spr,
+                                  SPEC #spec ],
+                            MC #mc,
+                            POSTHEAD #ph ],
+                MODIFIED #mod ],
+    HEAD-DTR [ INFLECTED #infl & infl-satisfied,
+               SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ #subj,
+                                            COMPS < unexpressed &
+                                              [ OPT +,
+                                                OPT-CS #def,
+                                                LOCAL.CONT.HOOK 
+                                                 [ INDEX #index & [ COG-ST #def ],
+                                                   ICONS-KEY #ikey,
+                                                   CLAUSE-KEY #ckey ] ] . #comps >,
+                                            SPR #spr,
+                                            SPEC #spec ],
+                                      MC #mc,
+                                      POSTHEAD #ph ],
+                                CONT.HOOK.INDEX event ],
+                        MODIFIED #mod ] ],
+    C-CONT [ RELS <! !>,
+             HCONS <! !>,
+             ICONS <! #ikey & non-focus & [ TARGET #index,
+                                            CLAUSE #ckey ] !> ] ].
+\end{verbatim}}
+
+\end{document}

@@ -1,0 +1,27 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+nc-filler-phrase := binary-phrase & phrasal &
+  [ SYNSEM [ LOCAL [ CAT [ VAL [ COMPS < >,
+                                 SPR < > ],
+                                 POSTHEAD + ] ],
+             NON-LOCAL.SLASH 0-dlist ],
+    ARGS <  [ SYNSEM [ LOCAL.CAT [ VAL.COMPS olist ],
+                       NON-LOCAL [ SLASH 1-dlist &
+                                         [ LIST [ FIRST #slash,
+                                                  REST < > & #last ],
+                                           LAST #last ],
+                                   QUE 0-dlist,
+                                   REL 0-dlist ] ] ],
+            [ SYNSEM [ LOCAL #slash & local &
+                             [ CAT.VAL [ SUBJ olist,
+                                         COMPS olist,
+                                         SPR olist ],
+                               CTXT.ACTIVATED + ],
+                       NON-LOCAL.SLASH 0-dlist ] ] > ].
+\end{verbatim}}
+
+\end{document}

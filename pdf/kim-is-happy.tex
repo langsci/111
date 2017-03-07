@@ -1,0 +1,21 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+\textbf{Kim} \& is \& \textsc{happy}. \\
+\end{deptext}
+
+\depedge[edge unit distance=1ex]{3}{1}{\textit{contrast-or-topic}}
+\deproot[edge below, edge unit distance=1ex]{3}{\textit{semantic-focus}}
+
+\end{dependency}
+
+\end{document}
+

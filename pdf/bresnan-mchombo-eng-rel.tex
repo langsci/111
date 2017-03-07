@@ -1,0 +1,21 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tree-dvips}
+\usepackage{times}
+\usepackage{xspace}
+\pagestyle{empty}
+
+
+
+\begin{document}
+
+
+\begin{tabular}{@{}l@{}l@{}l@{}l@{}l}
+The car [ \xspace	& which		\xspace	& you don't want \xspace	& \_\_\_ \xspace		& ] is a Renault. \\
+				& \node{a}{\textsc{topic}}	&					& \node{b}{\textsc{obj}} \\
+\end{tabular}
+\barnodeconnect[-5pt]{b}{a}
+
+
+\end{document}

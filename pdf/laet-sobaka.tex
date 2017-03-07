@@ -1,0 +1,45 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{relsize}
+\usepackage{qtree}
+\usepackage{xspace}
+\usepackage{avm}
+\usepackage[usenames]{color}
+\pagestyle{empty}
+
+
+\begin{document}
+
+\leaf{Laet}
+\branch{1}{V \vspace{-10pt} \\
+\begin{avm}
+\[ INDEX \@{2} \\
+   SUBJ \< \@{3} \>  \\
+   ICONS \<!  !\> \\ \]
+\end{avm}}
+\leaf{sobaka}
+\branch{1}{N  \vspace{-10pt} \\
+\begin{avm}
+\[ INFOSTR-FLAG -- \\
+   INDEX \@{4} \\
+   ICONS \<! \xspace \xspace !\> \\ \]
+\end{avm}}
+\branch{1}{NP  \vspace{-10pt} \\
+\begin{avm}
+\@{3}\[ {\it narrow-focused-phrase} \\
+   INFOSTR-FLAG + \\
+   R-PERIPH + \\
+   ICONS \<! \@{1}\[ {\it focus}  \\
+ 		     TARGET & \@{4} \\ 
+		     CLAUSE & \@{2} \] \xspace \xspace !\> \\ \]
+\end{avm}}
+\branch{2}{S \vspace{-10pt} \\
+\begin{avm}
+\[ {\it head-subj-phrase} \\
+    ICONS \<! \@{1} !\> \]
+\end{avm}}
+\qobitree
+
+\end{document}
+

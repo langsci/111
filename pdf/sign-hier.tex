@@ -1,0 +1,61 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tree-dvips}
+\usepackage{times}
+\pagestyle{empty}
+
+
+\pagestyle{empty}
+
+\begin{document}
+\textit{
+\begin{tabular}[t]{@{}cccccc@{}}
+% & \multicolumn{2}{c}{\node{a1}{sign-min}}  \\[4ex]
+% & \node{b2}{basic-sign} & \node{b1}{word-or-lexrule-min} \\[4ex]
+% & \node{c1}{sign} \\[4ex] 
+\multicolumn{6}{c}{\node{c1}{sign}} \\[4ex] 
+\node{d3}{nocoord}  & \node{d1}{word-or-lexrule} & \node{d2}{phrase-or-lexrule} & \node{d4}{rule} & \node{d5}{label} & \node{d6}{meta} \\[4ex]
+ \node{e2}{word} & \node{e3}{lex-item} & \node{e1}{phrase}  \\[4ex]
+\end{tabular}}
+
+%\nodeconnect{a1}{b1}
+%\nodeconnect{a1}{b2}
+
+%\nodeconnect{b1}{d1}
+%\nodeconnect{b2}{c1}
+
+\nodeconnect{c1}{d1}
+\nodeconnect{c1}{d2}
+\nodeconnect{c1}{d3}
+\nodeconnect{c1}{d4}
+\nodeconnect{c1}{d5}
+\nodeconnect{c1}{d6}
+
+\nodeconnect{d2}{e1}
+\nodeconnect{d1}{e2}
+\nodeconnect{d1}{e3}
+\nodeconnect{d3}{e2}
+\nodeconnect{d3}{e3}
+
+
+\end{document}
+
+
+
+%% \begin{tabular}[t]{@{}c@{}c@{}c@{}c@{}c@{}}
+%% \multicolumn{5}{c}{\node{a1}{sign}}  \\[4ex]
+%% 	& \node{b1}{expression}	&	& \node{b2}{lex-sign} \\[4ex]
+%% \node{c1}{phrase} &	& \node{c2}{word} &	& \node{c3}{lexeme}   \\[4ex]
+
+
+%% \nodeconnect{a1}{b1}
+%% \nodeconnect{a1}{b2}
+
+%% \nodeconnect{b1}{c1}
+%% \nodeconnect{b1}{c2}
+
+%% \nodeconnect{b2}{c2}
+%% \nodeconnect{b2}{c3}
+
+

@@ -1,0 +1,24 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+Physically \& Kim \& is \& doing \& well.\\
+\end{deptext}
+\deproot[edge unit distance=1ex]{4}{\textit{info-str}}
+\depedge[edge below, edge unit distance=1ex]{4}{2}{\textit{info-str}}
+\depedge[edge below, edge unit distance=2ex]{4}{5}{\textit{non-topic}}
+\depedge[edge unit distance=.5ex]{4}{1}{\textit{frame-setting}}
+
+%\wordgroup{1}{6}{7}{obj}
+
+\end{dependency}
+
+\end{document}
+

@@ -1,0 +1,47 @@
+\documentclass[a1paper]{article}
+
+
+\usepackage{qtree}
+\usepackage{avm}
+\usepackage{xspace}
+\pagestyle{empty}
+
+
+\begin{document}
+\leaf{subj}
+\branch{1}{\begin{avm}
+\[ ICONS \<! \xspace \xspace !\> \]
+\end{avm}}
+\leaf{dobj}
+\branch{1}{\begin{avm}
+\[ INDEX \@{2} \\
+   ICONS \<! \@{1}\[ {\it focus} \\ 
+                    CLAUSE & \@{3} \\ 
+                    TARGET & \@{2} \\ \] \xspace \xspace !\> \]
+\end{avm}}
+\leaf{verb}
+\branch{1}{\begin{avm}
+\[ LIGHT + \\
+    INDEX \@{3} \\
+    ICONS \<! \xspace \xspace !\> \]
+\end{avm}}
+\branch{2}{VP \vspace{-10pt} \\
+\begin{avm}
+\[ LIGHT -- \\
+     ICONS \<! \@{1} !\> \]
+\end{avm}}
+\leaf{iobj}
+\branch{1}{\begin{avm}
+\[ ICONS \<!  \xspace \xspace !\> \]
+\end{avm}}
+\branch{2}{VP \vspace{-10pt} \\
+\begin{avm}
+\[ ICONS \<! \@{1} !\> \]
+\end{avm}}
+\branch{2}{S \vspace{-10pt} \\
+\begin{avm}
+\[  ICONS \<! \@{1} !\> \]
+\end{avm}}
+\qobitree
+
+\end{document}

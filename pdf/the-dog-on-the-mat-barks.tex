@@ -1,0 +1,22 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+The \& dog \& on \& the \& \textsc{mat} \& barks. \\
+\end{deptext}
+\depedge[edge below, edge unit distance=1ex]{6}{2}{\textit{non-topic}}
+\deproot[edge unit distance=1.3ex]{6}{\textit{bg}}
+\depedge{6}{5}{\textit{focus}}
+\depedge[arc edge, edge below, theme = simple, label style={below}, arc angle = 0]{3}{2}{ARG1}
+\depedge[arc edge, edge below, theme = simple, label style={below}, arc angle = 0]{3}{5}{ARG2}
+\end{dependency}
+
+\end{document}
+

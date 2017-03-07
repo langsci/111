@@ -1,0 +1,27 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+icons := avm.
+info-str := icons &
+  [ CLAUSE individual,
+    TARGET individual ].
+non-topic := info-str. 
+contrast-or-focus := info-str. 
+focus-or-topic := info-str. 
+contrast-or-topic := info-str. 
+non-focus := info-str.
+focus := non-topic & contrast-or-focus & focus-or-topic.
+contrast := focus-or-topic & contrast-or-focus & contrast-or-topic.
+topic := non-focus & focus-or-topic & contrast-or-topic.
+bg := non-topic & non-focus.
+semantic-focus := focus.
+contrast-focus := contrast & focus. 
+contrast-topic := contrast & topic. 
+aboutness-topic := topic. 
+\end{verbatim}}
+
+\end{document}
+

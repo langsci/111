@@ -1,0 +1,45 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{relsize}
+\usepackage{qtree}
+\usepackage{avm}
+\usepackage{xspace}
+\usepackage[usenames]{color}
+\pagestyle{empty}
+\newcommand{\myred}[1]{\textcolor{RubineRed}{#1}}
+\newcommand{\myblue}[1]{\textcolor{Cyan}{#1}}
+
+
+\begin{document}
+
+\leaf{inu}
+\branch{1}{N \vspace{-10pt}  \\
+\begin{avm}
+\[ INDEX \@{2} \]
+\end{avm}}
+\leaf{ga}
+\branch{1}{P \vspace{-10pt} \\
+\begin{avm}
+\[ C-KEY \@{3} \\
+   ICONS \<! \@{1}\[ {\it non-topic} \\
+          CLAUSE & \@{3} \\ 
+	  TARGET & \@{2} \\ \] \xspace \xspace !\> \]
+\end{avm}}
+\branch{2}{PP \vspace{-10pt} \\
+\begin{avm}
+\[ ICONS \<! \@{1} \xspace \xspace !\> \] 
+\end{avm}}
+\leaf{hoeru}
+\branch{1}{V \vspace{-10pt}  \\
+\begin{avm}
+\[ INDEX \@{3} \]
+\end{avm}}
+\branch{2}{S \vspace{-10pt} \\
+\begin{avm}
+\[ ICONS \<! \@{1} \xspace \xspace !\> \]
+\end{avm}}
+\qobitree
+
+\end{document}
+

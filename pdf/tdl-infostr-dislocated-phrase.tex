@@ -1,0 +1,23 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+infostr-dislocated-phrase := no-rels-hcons-rule & narrow-focus &
+  [ SYNSEM.LOCAL.CAT.MC +,
+    C-CONT.ICONS <! info-str & #icons &
+                    [ TARGET #index, CLAUSE #clause ] !>,
+    HEAD-DTR.SYNSEM.LOCAL 
+      [ CAT [ MC -,
+              HEAD verb ],
+        CONT.HOOK [ INDEX #clause,
+                    CLAUSE-KEY #clause ] ],
+    NON-HEAD-DTR.SYNSEM 
+      [ LIGHT -,
+        LOCAL [ CAT.HEAD +np,
+                CONT.HOOK [ INDEX #index,
+                            ICONS-KEY #icons ] ] ] ].
+\end{verbatim}}
+
+\end{document}

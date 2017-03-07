@@ -1,0 +1,26 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+The \& dog \& jumps \& and \& barks.\\
+\end{deptext}
+\depedge[edge unit distance=1ex]{4}{2}{\textit{info-str}}
+\deproot[edge unit distance=1ex]{4}{\textit{info-str}}
+
+\depedge[edge below, edge unit distance=1ex]{5}{2}{\textit{info-str}}
+\depedge[edge below, edge unit distance=2ex]{3}{2}{\textit{info-str}}
+
+
+\wordgroup{1}{3}{5}{vp}
+
+\end{dependency}
+
+\end{document}
+

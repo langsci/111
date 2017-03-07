@@ -1,0 +1,24 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+The \& book, \& Kim \& reads \& it.\\
+\end{deptext}
+
+%\deproot[edge below, edge unit distance=1.3ex]{4}{\textit{info-str}}
+%\depedge[edge unit distance=2ex]{4}{3}{\textit{info-str}}
+%\depedge[edge unit distance=2ex]{4}{5}{\textit{info-str}}
+\depedge[edge unit distance=1ex]{4}{2}{\textit{\textbf{contrast-topic}}}
+
+
+\end{dependency}
+
+\end{document}
+

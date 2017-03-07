@@ -1,0 +1,20 @@
+\documentclass[a4paper]{article}
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+That \& is \& what \& they \& are \& trying \& to \& do. \\
+\end{deptext}
+\depedge{2}{1}{\textit{focus}}
+\depedge[edge below, edge unit distance=.5ex]{2}{6}{\textit{non-focus}}
+\end{dependency}
+
+\end{document}
+
+
+

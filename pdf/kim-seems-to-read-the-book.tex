@@ -1,0 +1,19 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+\textbf{Kim} \& seems \& to \& read \& the \& \textsc{book}. \\
+\end{deptext}
+\depedge[edge below, edge unit distance=.5ex]{2}{6}{\textit{semantic-focus}}
+\depedge[edge unit distance=2ex]{2}{1}{\textit{contrast-or-topic}}
+\end{dependency}
+
+\end{document}
+

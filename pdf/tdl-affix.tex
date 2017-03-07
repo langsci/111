@@ -1,0 +1,20 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+add-icons-rule := phrase-or-lexrule & word-or-lexrule &
+  [ SYNSEM.LOCAL.CONT.HOOK [ INDEX #target,
+                             ICONS-KEY #icons ],
+    C-CONT.ICONS <! info-str & #icons & [ TARGET #target] !> ].
+
+p1-lex-rule-super := add-only-no-rels-hcons-rule & infl-lex-rule &
+  [ DTR noun-lex ].
+
+r1-lex-rule := add-icons-rule & p1-lex-rule-super &
+  [ SYNSEM.LOCAL [ CAT.MKG fc,
+                   CONT.HOOK.ICONS-KEY focus ] ].
+\end{verbatim}}
+
+\end{document}

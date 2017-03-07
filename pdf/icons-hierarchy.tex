@@ -1,0 +1,35 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tree-dvips}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+\begin{tabular}[t]{@{}cccc@{}}
+\multicolumn{4}{c}{\node{a1}{\textit{icons}}}  \\[3ex]
+\node{b1}{\textit{anaphora}} & \node{b2}{\textit{info-str}} & \node{b3}{\textit{tense}} & \node{b4}{\textit{honorific}}\\[3ex]
+\nodeconnect{a1}{b1}
+\nodeconnect{a1}{b2}
+\nodeconnect{a1}{b3}
+\nodeconnect{a1}{b4}
+\end{tabular}
+
+\end{document}
+
+
+
+% \begin{tabular}[t]{@{}ccccccc@{}}
+% & & & \node{a1}{\textit{icons}} &  \\[3ex]
+% & \node{b2}{\textit{anaphora}} & & & & \node{b1}{\textit{info-str}} &  \\[3ex]
+% \node{c4}{\textit{eq}} & \node{c5}{\textit{neq}} & \node{c6}{\textit{meq}} & & \node{c1}{\textit{non-topic}} & \node{c2}{\textit{contrast}} & \node{c3}{\textit{non-focus}} \\
+% \nodeconnect{a1}{b1}
+% \nodeconnect{a1}{b2}
+% \nodeconnect{b1}{c1}
+% \nodeconnect{b1}{c2}
+% \nodeconnect{b1}{c3}
+% \nodeconnect{b2}{c4}
+% \nodeconnect{b2}{c5}
+% \nodeconnect{b2}{c6}
+% \end{tabular}
+

@@ -1,0 +1,21 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+headed-phrase := phrase & 
+  [ SYNSEM.LOCAL [ CAT.HEAD head & #head,
+                   AGR #agr,
+                   COORD -,
+                   COORD-REL #crel ],
+    C-CONT.HOOK.ICONS-KEY #icons,
+    HEAD-DTR.SYNSEM.LOCAL local &
+                 [ CAT.HEAD #head,
+                   CONT.HOOK.ICONS-KEY #icons,
+                   AGR #agr,
+                   COORD -,
+                   COORD-REL #crel ] ].
+\end{verbatim}}
+
+\end{document}

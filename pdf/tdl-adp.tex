@@ -1,0 +1,25 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+infostr-marking-adp-lex := basic-one-arg & raise-sem-lex-item & 
+                           one-icons-lex-item &
+  [ SYNSEM.LOCAL [ CAT [ HEAD adp & [ MOD < > ],
+                         VAL [ SPR < >,
+                               SUBJ < >,
+                               COMPS 
+                                 < #comps &
+                                   [ LOCAL.CONT.HOOK.INDEX 
+                                       #target ] >,
+                               SPEC < > ] ],
+                   CONT [ HOOK.ICONS-KEY #icons,
+                          ICONS <! #icons & 
+                                   [ TARGET #target ] !> ] ],
+    ARG-ST < #comps &
+             [ LOCAL.CAT [ HEAD noun,
+                           VAL.SPR < > ] ] > ].
+\end{verbatim}}
+
+\end{document}

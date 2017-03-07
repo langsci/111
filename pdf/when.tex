@@ -1,0 +1,30 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+When \& the \& dog \& barks, \& Kim \& reads \& the \& book.\\
+\end{deptext}
+%\deproot[edge unit distance=1.5ex]{4}{\textit{info-str}}
+
+%\deproot[edge unit distance=1.5ex]{6}{\textit{info-str}}
+
+%\depedge[edge unit distance=2ex]{4}{3}{\textit{info-str}}
+
+%\depedge[edge unit distance=2ex]{6}{5}{\textit{info-str}}
+%\depedge[edge unit distance=1ex]{6}{8}{\textit{info-str}}
+
+\depedge[edge below, edge unit distance=1ex]{6}{4}{\textit{\textbf{topic}}}
+
+%\wordgroup{1}{6}{7}{obj}
+
+\end{dependency}
+
+\end{document}
+

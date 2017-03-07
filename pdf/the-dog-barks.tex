@@ -1,0 +1,35 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{relsize}
+\usepackage{qtree}
+\usepackage{avm}
+\usepackage{xspace}
+\usepackage[usenames]{color}
+\pagestyle{empty}
+
+
+\begin{document}
+
+\leaf{The \textsc{dog}}
+\branch{1}{NP \vspace{-10pt} \\
+\begin{avm}
+\[ INDEX \@{2} \\
+   ICONS \<! \@{1}\[ {\it semantic-focus} \\
+   CLAUSE & \@{3} \\ 
+   TARGET & \@{2} \\ \]  \xspace !\> \]
+\end{avm}}
+\leaf{barks}
+\branch{1}{V  \vspace{-10pt} \\
+\begin{avm}
+\[ INDEX \@{3} \\
+   ICONS \<! \xspace \xspace !\> \]
+\end{avm}}
+\branch{2}{S \vspace{-10pt} \\
+\begin{avm}
+\[ ICONS \<! \@{1} \xspace !\> \]
+\end{avm}}
+\qobitree
+
+\end{document}
+

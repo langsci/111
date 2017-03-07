@@ -1,0 +1,41 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{relsize}
+\usepackage{qtree}
+\usepackage{avm}
+\pagestyle{empty}
+
+
+\begin{document}
+
+\leaf{The}
+\branch{1}{D}
+\leaf{\textbf{dog}}
+\branch{1}{N \\
+\begin{avm}
+\[ INDEX \@{3} \\
+\< \@{1}\[ {\it topic} \\
+	CLAUSE & \@{4} \\ 
+	TARGET & \@{3} \\ \] \> \]
+\end{avm}}
+\branch{2}{NP}
+\leaf{\textsc{barks}.}
+\branch{1}{V \\
+\begin{avm}
+\[ INDEX \@{4} \\
+\< \@{2}\[ {\it focus} \\
+        CLAUSE & \@{4} \\ 
+	TARGET & \@{4} \\ \] \> \]
+\end{avm}}
+\branch{2}{S \\
+\begin{avm}
+\[ ICONS \< \@{1}, \@{2} \> \]
+\end{avm}}
+\qobitree
+
+
+
+
+\end{document}
+

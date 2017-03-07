@@ -1,0 +1,20 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\usepackage{ulem}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+\sout{It} \& \sout{is} \& the \& \textsc{dog} \& \sout{that} \& barks. \\
+\end{deptext}
+\depedge[edge unit distance=1ex]{6}{4}{\textit{\textbf{contrast-focus}}}
+%\deproot[edge unit distance=1ex]{6}{\textit{info-str}}
+\end{dependency}
+
+\end{document}
+

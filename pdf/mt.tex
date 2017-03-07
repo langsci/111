@@ -1,0 +1,32 @@
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage{tikz}
+
+\usepackage{verbatim}
+\usetikzlibrary{arrows,shapes}
+\pagestyle{empty}
+
+\begin{document}
+
+\tikzstyle{format0} = [draw=white, minimum height=3em]
+\tikzstyle{format1} = [draw, thin, minimum height=3em]
+\tikzstyle{format2} = [draw, double, minimum height=3em]
+
+
+\begin{figure}
+\begin{tikzpicture}[node distance=3cm, auto,>=latex', thick]
+   \path[->] node[format0, text width=2.8em, align=center] (1) {Source Text};                  
+   \path[->] node[format1, text width=3.8em, align=center, right of=1] (2) {Source Analysis};
+   \path[->] node[format2, text width=4em, align=center, right of=2] (3) {Semantic Transfer};
+   \path[->] node[format1, text width=4.6em, align=center, right of=3] (4) {Target Generation};
+   \path[->] node[format0, text width=2.8em, align=center, right of=4] (5) {Target Text(s)};
+   \path[->] (1) edge (2);
+   \path[->] (2) edge node {MRS$_s$} (3);
+   \path[->] (3) edge node {MRS$_t$} (4);
+   \path[->] (4) edge (5);
+\end{tikzpicture}
+\end{figure}
+
+\end{document}

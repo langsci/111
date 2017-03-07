@@ -1,0 +1,29 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tree-dvips}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+\textit{
+\begin{tabular}[t]{@{}cccc@{}}
+\multicolumn{4}{c}{\node{a}{mkg}}\\[4ex]
+\node{b}{fc} & \node{c}{non-tp} & \node{d}{tp} &  \node{e}{non-fc} \\[4ex]
+\node{f}{fc-only} & \node{g}{fc-+-tp} & \node{h}{unmkg} &  \node{i}{tp-only} \\[4ex]
+\end{tabular}}
+\nodeconnect{a}{b}
+\nodeconnect{a}{c}
+\nodeconnect{a}{d}
+\nodeconnect{a}{e}
+\nodeconnect{b}{f}
+\nodeconnect{b}{g}
+\nodeconnect{c}{f}
+\nodeconnect{c}{h}
+\nodeconnect{d}{g}
+\nodeconnect{d}{i}
+\nodeconnect{e}{h}
+\nodeconnect{e}{i}
+
+\end{document}
+

@@ -1,0 +1,16 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+nf-comp-head-phrase := head-nf-comp-phrase-super & 
+                       head-final &
+ [ SYNSEM.LOCAL.CAT.MC -, 
+   HEAD-DTR.SYNSEM [ LIGHT +,
+                     LOCAL.CAT.MC - ],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT.HEAD +np,
+                               CONT.HOOK.ICONS-KEY focus ] ]. 
+\end{verbatim}}
+
+\end{document}

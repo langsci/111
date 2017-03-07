@@ -1,0 +1,23 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+infostr-marking-mod-lex := no-rels-hcons-lex-item &
+                           one-icons-lex-item &
+  [ SYNSEM.LOCAL [ CAT [ HEAD adv &
+                           [ MOD 
+                               < [ LIGHT -,
+                                   LOCAL.CONT.HOOK 
+                                     [ INDEX #target,
+                                       ICONS-KEY #icons ] ] > ],
+                        VAL [ SUBJ < >, 
+                              COMPS < >, 
+                              SPR < >, 
+                              SPEC < > ] ],
+                   CONT.ICONS 
+                     <! #icons & [ TARGET #target ] !> ] ].
+\end{verbatim}}
+
+\end{document}

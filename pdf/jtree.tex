@@ -1,0 +1,83 @@
+\documentclass[a1paper]{article}
+
+
+\usepackage{relsize}
+\usepackage{qtree}
+\usepackage{avm}
+\pagestyle{empty}
+
+
+\begin{document}
+
+\leaf{Kim}
+\branch{1}{N \\
+\begin{avm}
+\[ INDEX \@{6} \\
+\< \@{1}\[ {\it focus} \\
+	C \@{7} \\ 
+	T \@{6} \\ \] \> \]
+\end{avm}}
+\leaf{ga}
+\branch{1}{P  \\
+\begin{avm}
+\[ $-$$-$T \@{6} \]
+\end{avm}}
+\branch{2}{PP}
+\leaf{mita}
+\branch{1}{V \\
+\begin{avm}
+\[ INDEX \@{7} \\
+\< \@{2}\[ {\it info-str} \\
+	C \@{7} \\ 
+	T \@{7} \\ \] \> \]
+\end{avm}}
+\branch{2}{VP}
+\leaf{inu}
+\branch{1}{N  \\
+\begin{avm}
+\[ INDEX \@{8} \\
+\< \@{3}\[ {\it info-str} \\
+	C \@{7} \\ 
+	T \@{8} \\ \], \\
+    \@{4}\[ {\it bg} \\
+	C \@{9} \\ 
+	T \@{8} \\ \] 
+\> \]
+\end{avm}}
+\branch{2}{NP}
+\leaf{ga}
+\branch{1}{P   \\
+\begin{avm}
+\[ $-$$-$T \@{8} \]
+\end{avm}}
+\branch{2}{PP}
+\leaf{hoeta}
+\branch{1}{V  \\
+\begin{avm}
+\[ INDEX \@{9} \\
+\< \@{5}\[ {\it non-focus} \\
+	C \@{9} \\ 
+	T \@{9} \\ \] \> \]
+\end{avm}}
+\branch{2}{S \\
+\begin{avm}
+\[ ICONS \< \@{1}, \@{2}, \@{3}, \@{4}, \@{5} \> \]
+\end{avm}}
+
+\qobitree
+
+
+%% \begin{avm}
+%% \[ INDEX \@{3} \\
+%% \< \@{1}\[ {\it topic} \\
+%% 	CLAUSE & \@{4} \\ 
+%% 	TARGET & \@{3} \\ \] \> \]
+%% \end{avm}}
+
+%% \begin{avm}
+%% \[ ICONS \< \@{1}, \@{2} \> \]
+%% \end{avm}}
+
+
+\end{document}
+

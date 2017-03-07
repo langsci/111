@@ -1,0 +1,68 @@
+\documentclass[a4paper]{article}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{patterns}
+
+\pgfplotsset{compat=1.4} 
+\pagestyle{empty}
+
+\definecolor{bblack}{HTML}{111111}
+\definecolor{wwhite}{HTML}{C8C8C8}
+
+\makeatletter
+\tikzset{nomorepostaction/.code=\let\tikz@postactions\pgfutil@empty}
+\makeatother
+
+
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        width=3.5in,
+	height=3in,
+        major x tick style = transparent,
+        ybar=2*\pgflinewidth,
+        ymajorgrids = true,
+        symbolic x coords={101,102,103,104,105,106,107,108,109,110},
+        xtick = data,
+        scaled y ticks = false,
+        enlarge x limits=0.1,
+	ymin=0, ymax=1,
+        legend cell align=left,
+        legend style={
+                at={(0.99,0.01)},
+                anchor=south east,
+                column sep=1ex
+        }
+    ]
+  \addplot[style={bar width=0.1in,fill=bblack,draw=black}]
+            coordinates {	(101,0.8563)
+				(102,0.8733)
+				(103,0.9713)
+				(104,0.7471)
+				(105,0.8635)
+				(106,0.9530)
+				(107,0.8832)
+				(108,0.7562)
+				(109,0.7744)
+				(110,0.7202)	    };
+  \addplot[style={bar width=0.1in,fill=wwhite,draw=black}]
+            coordinates {	(101,0.8502)
+				(102,0.8540)
+				(103,0.9393)
+				(104,0.7372)
+				(105,0.7222)
+				(106,0.9466)
+				(107,0.8596)
+				(108,0.7389)
+				(109,0.7630)
+				(110,0.6205)	    };
+ \legend{All Tiers,OF/IF Tiers}
+ \end{axis}
+\end{tikzpicture}
+\end{document}
+
+
+
+

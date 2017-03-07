@@ -1,0 +1,41 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+basic-head-mod-phrase-simple := head-mod-phrase & binary-headed-phrase &
+  [ SYNSEM [ NON-LOCAL [ SLASH [ LIST #first, LAST #last ],
+                         REL 0-dlist ] ],
+    HEAD-DTR.SYNSEM 
+           [ LOCAL [ CAT [ HEAD #head,
+                           VAL #val,
+                           POSTHEAD #ph,
+                           MC #hmc,
+                           HC-LIGHT - ],
+                     CONT.HOOK #hdhook & [ ICONS-KEY.CLAUSE #clause ],
+                     AGR #agr ],
+             NON-LOCAL #nonloc &
+                   [ SLASH [ LIST #middle, LAST #last ] ],
+             LIGHT #light,
+             MODIFIED #modif ],
+    NON-HEAD-DTR.SYNSEM 
+           [ LOCAL [ CAT [ HEAD [ MOD < [ LOCAL local & 
+                                              [ CAT [ HEAD #head,
+                                                      VAL #val,
+                                                      POSTHEAD #ph,
+                                                      MC #hmc ],
+                                                AGR #agr,
+                                                CONT.HOOK #hdhook ],
+                                          NON-LOCAL #nonloc,
+                                          LIGHT #light,
+                                          MODIFIED #modif ] > ],
+                          VAL [ COMPS olist, SPR olist ] ],
+                     CONT.HOOK [ ICONS-KEY.CLAUSE #clause,
+                                 CLAUSE-KEY #clause ] ],
+             NON-LOCAL [ SLASH [ LIST #first, LAST #middle ],
+                         QUE 0-dlist & [ LIST null ] ] ],
+    C-CONT [ RELS <! !>, ICONS <! !> ] ].
+\end{verbatim}}
+
+\end{document}

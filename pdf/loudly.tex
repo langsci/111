@@ -1,0 +1,23 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+Loudly \& the \& dog \& barks.\\
+\end{deptext}
+\deproot[edge unit distance=1.5ex]{4}{\textit{info-str}}
+\depedge[edge unit distance=2ex]{4}{3}{\textit{info-str}}
+\depedge[edge below, edge unit distance=.5ex]{4}{1}{\textit{frame-setting-topic}}
+
+%\wordgroup{1}{6}{7}{obj}
+
+\end{dependency}
+
+\end{document}
+

@@ -1,0 +1,33 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{relsize}
+\usepackage{qtree}
+\usepackage{xspace}
+\usepackage{avm}
+\usepackage[usenames]{color}
+\pagestyle{empty}
+
+
+\begin{document}
+
+\leaf{Habla}
+\branch{1}{V \vspace{-10pt} \\
+\begin{avm}
+\[ SUBJ & \< \[ {\it unexpressed-reg} \\
+                INDEX \@{1} \] \> \\
+   INDEX & \@{2} \\
+   ICONS & \<!  !\>  \]
+\end{avm}}
+\branch{1}{S \vspace{-10pt} \\
+\begin{avm}
+\[ {\it head-opt-subj-phrase} \\
+    SUBJ \xspace \xspace \< \xspace \xspace \> \\
+    ICONS \<! \[ {\it non-focus} \\
+		 TARGET & \@{1} \\
+		 CLAUSE & \@{2} \] \xspace \xspace !\> \]
+\end{avm}}
+\qobitree
+
+\end{document}
+

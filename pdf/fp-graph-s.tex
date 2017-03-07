@@ -1,0 +1,24 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tikz-dependency}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{dependency}
+\begin{deptext}
+Kim \& sent \& Lee \& the \& \textsc{book}. \\
+\end{deptext}
+
+\depedge[edge unit distance=3.3ex]{1}{2}{\textit{semantic-focus}}
+\depedge[edge unit distance=.5ex]{5}{2}{\textit{semantic-focus}}
+\deproot[edge below, edge unit distance=1.7ex]{2}{\textit{semantic-focus}}
+\depedge[edge below, edge unit distance=2.3ex]{3}{2}{\textit{non-focus}}
+
+
+\end{dependency}
+
+\end{document}
+

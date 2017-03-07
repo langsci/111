@@ -1,0 +1,77 @@
+
+\documentclass[a4paper]{article}
+
+
+\usepackage{relsize}
+\usepackage{qtree}
+\usepackage{avm}
+\usepackage[usenames]{color}
+\pagestyle{empty}
+\newcommand{\myred}[1]{\textcolor{RubineRed}{#1}}
+\newcommand{\myblue}[1]{\textcolor{Cyan}{#1}}
+
+
+
+\begin{document}
+
+
+\begin{avm}
+\[ \avmspan{\it mrs}	\\
+LTOP & \@{h1}\ 	\\ 
+INDEX & \@{e2}\ 	\\ 
+RELS & \<
+		\[ \avmspan{\it \_the\_q\_rel}	\\
+		LBL & \@{h3}\ 	\\ 
+		ARG0 & \@{x5}\	\\ 
+		RSTR & \@{h6}\	\\ 
+		BODY & \@{h4}\	\\ \], 
+		\[ \avmspan{\it \_dog\_n\_rel}	\\
+		LBL & \@{h7}\ 	\\ 
+		ARG0 & \@{x5}\ 	\\ \], 
+		\[ \avmspan{\it proper\_q\_rel}	\\
+		LBL & \@{h8}\ 	\\ 
+		ARG0 & \myblue{\@{{\bf x10}}}\ 	\\ 
+		RSTR & \@{h9}\	\\ 
+		BODY & \@{h11}\ \\ \], \\
+		\[ \avmspan{\it named\_rel}	\\
+		LBL & \@{h12}\ 	\\ 
+		ARG0 & \myblue{\@{{\bf x10}}}\ 	\\ 
+		CARG & {\it kim}	\\ \], 
+		\[ \avmspan{\it \_see\_v\_rel}	\\
+		LBL & \@{h7}\ 	\\ 
+		ARG0 & \myred{\@{{\bf e13}}}\	\\ 
+		ARG1 & \myblue{\@{{\bf x10}}}\ 	\\ 
+		ARG2 & \@{x5}\ 	\\ \], 
+		\[ \avmspan{\it \_bark\_v\_rel}	\\
+		LBL & \@{h14}\ 	\\ 
+		ARG0 & \@{e2}\ 	\\ 
+		ARG1 & \@{x5}\ 	\\ \]\>	\\ 
+HCONS & \<
+		\[ \avmspan{\it qeq}	\\
+		HARG & \@{h6}\ 	\\ 
+		LARG & \@{h7}\ 	\\ \], 
+		\[ \avmspan{\it qeq}	\\
+		HARG & \@{h9}\ 	\\ 
+		LARG & \@{h12}\ 	\\ \]\>	\\
+ICONS & \<
+		\[ \avmspan{\it focus}	\\
+		CLAUSE & \myred{\@{{\bf e13}}}\ 	\\ 
+		TARGET & \myblue{\@{{\bf x10}}}\ 	\\ \],  
+		\[ \avmspan{\it info-str}	\\
+		CLAUSE & \myred{\@{{\bf e13}}}\ 	\\ 
+		TARGET & \myred{\@{{\bf e13}}}\ 	\\ \],  
+		\[ \avmspan{\it info-str}	\\
+		CLAUSE & \myred{\@{{\bf e13}}}\ 	\\ 
+		TARGET & \@{x5}\ 	\\ \],  \\
+		\[ \avmspan{\it non-focus}	\\
+		CLAUSE & \@{e2}\ 	\\ 
+		TARGET & \@{x5}\ 	\\ \],  
+		\[ \avmspan{\it info-str}	\\
+		CLAUSE & \@{e2}\ 	\\ 
+		TARGET & \@{e2}\ 	\\ \] \> \\ \]
+\end{avm}
+
+
+\end{document}
+
+

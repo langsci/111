@@ -1,0 +1,22 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tree-dvips}
+\usepackage{times}
+\usepackage{xspace}
+\pagestyle{empty}
+
+
+
+\begin{document}
+
+
+\begin{tabular}{@{}l@{}l@{}l@{}l@{}l@{}l@{}l}
+[ It is \xspace	& my car \xspace		& [ \xspace	& that \xspace			& you don't want \xspace	& \_\_\_ \xspace	& ] ]. \\
+		 	& \node{a}{\textsc{focus}}	&			& \node{b1}{\textsc{to}}\node{b2}{\textsc{pic}} 	&					& \node{c}{\textsc{obj}} \\
+\end{tabular}
+\barnodeconnect[-5pt]{b1}{a}
+\barnodeconnect[-5pt]{c}{b2}
+
+
+\end{document}

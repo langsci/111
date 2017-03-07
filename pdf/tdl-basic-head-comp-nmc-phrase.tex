@@ -1,0 +1,25 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+basic-head-comp-nmc-phrase := head-valence-phrase & head-compositional & 
+                              binary-headed-phrase & no-ccont-rule & 
+  [ SYNSEM phr-synsem &
+           [ LOCAL.CAT [ MC -,
+                         VAL [ SUBJ < >,
+                               SPR #spr ],
+                         POSTHEAD #ph,
+                         HC-LIGHT #light ],
+             LIGHT #light ],
+    HEAD-DTR.SYNSEM 
+           [ LOCAL.CAT [ VAL [ SUBJ < [ LOCAL #slash ] >,
+                               SPR #spr ],
+                         HC-LIGHT #light,
+                         POSTHEAD #ph ],
+             NON-LOCAL.SLASH 1-dlist & [ LIST < #slash > ] ], 
+    NON-HEAD-DTR.SYNSEM canonical-synsem ].
+\end{verbatim}}
+
+\end{document}

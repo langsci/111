@@ -1,0 +1,22 @@
+\documentclass[a4paper]{article}
+
+\pagestyle{empty}
+\begin{document}
+
+{\small\begin{verbatim}
+basic-head-comp-phrase := head-valence-phrase & head-compositional &
+                          binary-headed-phrase & no-ccont-rule &
+  [ SYNSEM phr-synsem-min &
+                   [ LOCAL.CAT [ VAL [ SUBJ #subj,
+                                       SPR #spr ],
+                                 POSTHEAD #ph,
+                                 HC-LIGHT #light ],
+                     LIGHT #light ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT [ VAL [ SUBJ #subj,
+                                        SPR #spr ],
+                                  HC-LIGHT #light,
+                                  POSTHEAD #ph ]], 
+    NON-HEAD-DTR.SYNSEM canonical-synsem ].
+\end{verbatim}}
+
+\end{document}

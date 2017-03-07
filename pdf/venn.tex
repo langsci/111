@@ -1,0 +1,62 @@
+\documentclass{article}
+
+\pagestyle{empty}
+
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,backgrounds}
+\begin{document}
+\pagestyle{empty}
+% Suppose we have three circles or ellipses or whatever. Let us define
+% commands for their paths since we will need them repeatedly in the
+% following:
+
+
+\def \firstcircle{ (0,0) circle (1cm) }
+\def \secondcircle{ (1.5,0) circle (1cm) }
+\def \thirdcircle{ (60:1.5) circle (1cm) }
+\def \top{ (-2, -1.5) rectangle (3, 2.5) }
+
+
+% Now we can draw the sets:
+\begin{tikzpicture}
+    \draw \top node[below left]{{\small plain}};
+    \draw \firstcircle (0,0) circle (1cm) node[below] {{\small fronting \mbox{}}};
+    \draw \secondcircle (1.5,0)  circle (1cm) node[below] {{\small cleft}};
+    \draw \thirdcircle (60:1.5) circle (1cm) node[above] {{\small passive}};
+
+    % Now we want to highlight the intersection of the first and the
+    % second circle:
+
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[gray] \secondcircle;
+    \end{scope}
+
+    \begin{scope}
+      \clip \secondcircle;
+      \fill[gray] \thirdcircle;
+    \end{scope}
+
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[gray] \thirdcircle;
+    \end{scope}
+
+    % Next, we want the highlight the intersection of all three circles:
+
+    \begin{scope}
+      \clip \firstcircle;
+      \clip \secondcircle;
+      \fill[black] \thirdcircle;
+    \end{scope}
+
+
+
+\end{tikzpicture}
+
+% Naturally, all of this could be bundled into nicer macros, but the above 
+% should give the idea.
+
+\end{document}
+

@@ -1,0 +1,42 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{tree-dvips}
+\usepackage{times}
+\pagestyle{empty}
+
+\begin{document}
+\textit{
+\begin{tabular}[t]{@{}ccccc@{}}
+\multicolumn{3}{c}{\node{a}{info-str}} & \\[4ex]
+\node{b}{non-topic} & \node{c}{focus-or-topic} & \node{e}{non-focus}     \\[4ex]
+\node{f}{focus} & \node{d}{contrast} & \node{h}{topic} & \node{g}{bg}    \\[4ex]
+\node{i}{semantic-focus} & \node{j}{contrast-focus} & \node{k}{contrast-topic} & \node{l}{aboutness-topic} & \node{m}{frame-setting-topic} \\[4ex]
+\end{tabular}}
+
+\nodeconnect{a}{b}
+\nodeconnect{a}{c}
+\nodeconnect{a}{e}
+
+\nodeconnect{b}{f}
+\nodeconnect{b}{g}
+
+\nodeconnect{c}{d}
+\nodeconnect{c}{f}
+\nodeconnect{c}{h}
+
+\nodeconnect{d}{j}
+\nodeconnect{d}{k}
+
+\nodeconnect{e}{g}
+\nodeconnect{e}{h}
+
+\nodeconnect{f}{i}
+\nodeconnect{f}{j}
+
+\nodeconnect{h}{k}
+\nodeconnect{h}{l}
+\nodeconnect{h}{m}
+
+\end{document}
+
