@@ -1,4 +1,4 @@
-\chapter{Preliminary Notes}
+\chapter{Preliminary notes}
 \label{2:notes}
 \setcounter{enums}{0}
 
@@ -11,13 +11,14 @@
 For ease of exposition, several typeface conventions are employed in
 this book to represent properties of information structure in
 examples. First, if a word (or phrase) bears the accent responsible
-for conveying \isi{focus}, it is marked in \textsc{small caps}. Second,
-\textbf{boldface} denotes an accent conveying \isi{topic}.  Third, [$_{f}$]
-stands for \isi{focus projection}. For example, in the \ili{English} Q/A pair in
-(\ref{exe:sample}), \textsc{dog} and \textbf{Kim} bear the A and B
-accents \citep{jackendoff:72}, respectively, and the focus that
-\textsc{dog} (with the A-accent) conveys is projected to the VP
-\textit{chased the \textsc{dog}}.\is{A-accent}
+for conveying \isi{focus}, it is marked in \textsc{small
+  caps}. Second, \textbf{boldface} denotes an accent conveying
+\isi{topic}.  Third, [$_{f}$] stands for \isi{focus projection}. For
+example, in the \ili{English} Q/A pair in (\ref{exe:sample}),
+\textsc{dog} and \textbf{Kim} bear the A and B accents
+\citep{jackendoff:72}, respectively, and the focus that \textsc{dog}
+(with the A-accent) conveys is projected to the VP \textit{chased the
+  \textsc{dog}}.\is{A-accent}
 
 \myexe{\enumsentence{\label{exe:sample}
 \begin{tabular}[t]{ll}
@@ -43,16 +44,15 @@ excerpted from previous literature, the proper names in the example
 are not modified at all.
 
 
-
 \begin{table}[h]
 \label{tbl:catalogue}
 \caption{Catalogue of languages}
 \footnotesize
 \centering
 \begin{tabular*}{.9\textwidth}{lll}
-\hline
-{\normalsize \textbf{name}} & {\normalsize \textbf{ISO 639-3}} & {\normalsize \textbf{language family}} \\ \hline
-\hline
+\lsptoprule
+{\normalsize \textbf{name}} & {\normalsize \textbf{ISO 639-3}} & {\normalsize \textbf{language family}}\\
+\midrule
 Abma & app & Austronesian/Oceanic \\ 
 Akan & aka & Niger-Congo/Kwa \\ 
 Armenian & hye & Indo-European \\ 
@@ -98,8 +98,7 @@ Turkish & tur & Turkic \\
 Vietnamese & vie & Austro-Asiatic/Vietic \\ 
 Wolof & wol & Niger-Congo/Senegambian \\ 
 Yiddish & ydd & Indo-European/Germanic \\ 
-\hline
-\hline
+\lspbottomrule
 \end{tabular*}
 \end{table}
 
@@ -118,7 +117,7 @@ speaker.
 Lexical markers in \ili{Korean} and \ili{Japanese} have been dealt
 with in different ways by previous literature. Because the current
 work aims to contribute to \isi{DELPH-IN} grammars, I follow the
-approaches that \isi{Jacy} (\citealt{siegel:bender:02}) and KRG
+approaches that \isi{Jacy} (\citealt{siegel:etal:16}) and \isi{KRG}
 (\citealt{kim:etal:11}) are based on.  KRG identifies the lexical
 markers in Korean (e.g.\ \ika for nominatives, \lul for accusatives,
 and \nun for topics) as affixes responsible for syntactic (and
@@ -162,20 +161,20 @@ between rheme and theme, a distinction originally conceptualized by
 the Prague School.  Within this framework, theme is defined as the
 element with the weakest communicative dynamism in a sentence, while
 rheme is defined as the element with the strongest communicative
-dynamism \citep[p.\ 72]{firbas:92}.
+dynamism \citep[72]{firbas:92}.
 
 
 
 Using slightly different terminologies, \citet{vallduvi:90} considers
-\isi{focus} to be the prime factor of information structure.  A sentence, in
-the \citeauthor{vallduvi:90}'s schema, can be divided into focus and
-ground, and \isi{ground} can be divided again into link and tail. Link is
-roughly equivalent to \isi{topic} in this book, with tail corresponding to
-the remaining portion of the sentence. For example, in
-\myref{exe:vallduvi:ch1}, \textit{the \textsc{dog}} functions as the
-focus of the sentence and \textit{\textbf{Kim} chased} is the ground
-of the sentence which comprises the link \textit{\textbf{Kim}} and the
-tail \textit{chased}.
+\isi{focus} to be the prime factor of information structure.  A
+sentence, in \citeauthor{vallduvi:90}'s schema, can be divided into
+focus and ground, and \isi{ground} can be divided again into link and
+tail. Link is roughly equivalent to \isi{topic} in this book, with
+tail corresponding to the remaining portion of the sentence. For
+example, in \myref{exe:vallduvi:ch1}, \textit{the \textsc{dog}}
+functions as the focus of the sentence and \textit{\textbf{Kim}
+  chased} is the ground of the sentence which comprises the link
+\textit{\textbf{Kim}} and the tail \textit{chased}.
 
 
 \myexe{\enumsentence{\label{exe:vallduvi:ch1}
@@ -205,28 +204,25 @@ First, there are the OSV constructions in \ili{English} as exemplified in
 \myexe{\enumsentence{\label{exe:prince:213:1}
 \begin{tabular}[t]{ll}
 a. & {John saw Mary yesterday.}\\
-b. & {Mary, John saw yesterday. \citep[p.\ 213]{prince:84}}\\
+b. & {Mary, John saw yesterday. \citep[213]{prince:84}}\\
 \end{tabular}}}
 
 \noindent Instead, the present study calls such a construction
-`focus/topic \isi{fronting}' taking the stance that the constructions
-like (\ref{exe:prince:213:1}b) are ambiguous. Because a fronted phrase
-such as \textit{Mary} in (\ref{exe:prince:213:1}b) can be associated
-with either \isi{focus} or topic, the term `topicalization' cannot
+`focus/topic \isi{fronting}' taking the stance that constructions like
+(\ref{exe:prince:213:1}b) are ambiguous. Because a fronted phrase such
+as \textit{Mary} in (\ref{exe:prince:213:1}b) can be associated with
+either \isi{focus} or topic, the term `topicalization' cannot
 satisfactorily represent the linguistic properties of such a
 construction.  Second, \wa in \ili{Japanese} and \nun in \ili{Korean}
 have been labelled as `topic markers' by many previous
 studies. However, they are not used exclusively to mark topics. They
-are sometimes employed in establishing contrastive focus.\is{contrastive focus}
-Thus, `topic-marker' is not an appropriate name (see
-\myS{5:sec:lex} \mypage{5:sec:lex}).  Instead, the present study uses
-just \wa-marking and \nun-marking in order to avoid confusion. In the
-IGT (Interlinear Glossed Text) format of Japanese and Korean examples,
-even if the source of the IGT says \textsc{top}, they are glossed as
-\textsc{wa} and \textsc{nun} unless there is a particular reason for
-saying \textsc{top}.
-
-
-
+are sometimes employed in establishing contrastive
+focus.\is{contrastive focus} Thus, `topic-marker' is not an
+appropriate name (see Section \ref{5:sec:lex}).  Instead, the present study
+uses just \wa-marking and \onun-marking in order to avoid
+confusion. In the IGT (Interlinear Glossed Text) format of Japanese
+and Korean examples, even if the source of the IGT says \textsc{top},
+they are glossed as \textsc{wa} and \textsc{nun} unless there is a
+particular reason for saying \textsc{top}.
 
 

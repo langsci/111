@@ -1,4 +1,4 @@
-\chapter{Literature Review}
+\chapter{Literature review}
 \label{chapter8}
 \setcounter{enums}{0}
 
@@ -7,19 +7,19 @@
 (Head-driven Phrase Structure Grammar,
 \citealt{pollard:sag:94}),\is{HPSG} MRS (Minimal Recursion Semantics,
 \citealt{copestake:etal:05}),\is{MRS} and other frameworks. First,
-\myS{8:sec:hpsg} investigates HPSG-based studies on information
+Section \ref{8:sec:hpsg} investigates HPSG-based studies on information
 structure, which are largely based on a pioneering study offered by
-\citet{engdahl:vallduvi:96}.  \myS{8:sec:mrs} looks into how several
+\citet{engdahl:vallduvi:96}.  Section \ref{8:sec:mrs} looks into how several
 previous studies represent information structure using the MRS
-formalism, and how they differ from the current model.  As most
-previous studies pay attention to how phonological structure interacts
-with information structure, \myS{8:sec:phonology} surveys related
-works.  \myS{8:sec:other-frameworks} offers an explanation of how
-other frameworks treat information structure within their formalism,
-and what implications they have for the current model.
+formalism, and how they differ from the current model.
+Section \ref{8:sec:phonology} surveys prior studies of how phonological
+structure interacts with information structure in HPSG.
+Section \ref{8:sec:other-frameworks} offers an explanation of how other
+frameworks treat information structure within their formalism, and
+what implications they have for the current model.
 
 
-\section{Information Structure in HPSG}
+\section{Information structure in HPSG}
 \label{8:sec:hpsg}
 
 
@@ -52,7 +52,7 @@ be more precisely explained within the HPSG framework, because HPSG
 accounts for various structural layers\is{HPSG} (e.g.\ phonology,
 morphosyntax, semantics, and pragmatics) in an interactive
 way. Regarding information structure in \ili{English},
-\citeauthor{engdahl:vallduvi:96} pay particular attention to
+\citeauthor{engdahl:vallduvi:96} pay particular attention to the
 co-operation between phonological behaviors and contextual
 information.  In their proposal, \tdl{accent} has three subtypes in
 \ili{English}. They use the traditional distinction between the A and
@@ -101,22 +101,20 @@ several studies co-index something inside of MRS with a value in the
 list of FOCUS, TOPIC, and others. In \citet{yoshimoto:etal:06},
 \citet{bildhauer:07}, and \citet{sato:tam:12}, the RELS itself has a
 structure-sharing with a value in the lists of components of
-information structure.  \citet{paggio:09} also makes use of
-MRS,\is{MRS} but the values in the lists of components of information
-structure are co-indexed with the value of INDEX (e.g.\ \tdl{x1},
-\tdl{e2}, etc.).  These two methods represent just two of many methods
-for representing information structure in HPSG and
-MRS.\is{HPSG}\is{MRS} Taking a different approach, \citet{chang:02}
-represents information structure using just a string (as presented in
-\myref{avm:chang:tf} \mypage{avm:chang:tf}). \citet{kim:07} and
-\citet{kim:12a} use a boolean feature as the value of FOCUS and TOPIC,
-and these features are under an independent structure called INFO-ST
-(as shown in \myref{avm:kim:beer} \mypage{avm:kim:beer}).  Sometimes,
-a specific feature structure is introduced, which represents logical
-forms \citep{webelhuth:07,dekuthy:meurers:11}.
+information structure.  \citet{paggio:09} also utilizes MRS,\is{MRS}
+but the values in the lists of components of information structure are
+co-indexed with the value of INDEX (e.g.\ \tdl{x1}, \tdl{e2}, etc.).
+These two methods represent just two of many methods for representing
+information structure in HPSG and MRS.\is{HPSG}\is{MRS} Taking a
+different approach, \citet{chang:02} represents information structure
+using just a string. \citet{kim:07} and \citet{kim:12a} use a boolean
+feature as the value of FOCUS and TOPIC, and these features are under
+an independent structure called INFO-ST.  Sometimes, a specific
+feature structure is introduced, which represents logical forms
+\citep{webelhuth:07,dekuthy:meurers:11}.
 
 
-\subsection{Sentential Forms}
+\subsection{Sentential forms}
 \label{8:ssec:sform}
 
 
@@ -128,28 +126,26 @@ regards information structure as a subtype of sentential grammar.
 There exist various suggestions on how information structure affects
 forms at the sentence level, such as topic-comment and
 focus-\isi{ground} (i.e.\ bipartite structures).  There are two basic
-components in \citet{engdahl:vallduvi:96}'s proposal; \isi{focus} and
-\isi{ground}. While ground acts as an usher for focus, focus is
-defined in their analysis as the actual information or update
-potential of a sentence. Ground, consisting of link and tail, is
-viewed as something already subsumed by the input information
-state.\footnote{Note that ground is not the same as
-  \isi{background}. Ground is thought of as opposite to focus, while
-  background is neither focus nor \isi{topic}. Tail, so to speak, has
-  almost the same way in realization as background.} This definition
-implies that a sentence can have a ground if and only if the
-informative content guarantees its use. For example, sentences with
-sentential focus (a.k.a.\ \tdl{all-focus} in \citet{paggio:09} and the
-present study), such as a reply to questions like \textit{What
-  happened?}, are not required to include ground.\is{background} Since
-they divide ground into link and tail, in line with
-\citet{vallduvi:90}, they make use of a tripartite structure
+components in the proposal by \citeauthor{engdahl:vallduvi:96};
+\isi{focus} and \isi{ground}. While ground acts as an usher for focus,
+focus is defined as the actual information or update potential of a
+sentence. Ground, consisting of link and tail, is viewed as something
+already subsumed by the input information state.\footnote{Note that
+  ground is not the same as \isi{background}. Ground is thought of as
+  opposite to focus, while background is neither focus nor
+  \isi{topic}.}  This definition implies that a sentence can have a
+ground if and only if the informative content guarantees its use. For
+example, sentences with sentential focus (\tdl{all-focus} in 
+the present study) -- such as a reply to
+questions like \textit{What happened?}, are not required to include
+ground.\is{background} Since they divide ground into link and tail, in
+line with \citet{vallduvi:90}, they make use of a tripartite structure
 consisting of different combinations of focus, link, and
 tail.\footnote{\citet{buring:03} suggests another tripartite structure
   such as topic-focus-background.} Building upon some extra
 constraints such as barring focus from preceding link (i.e.\ linear
-order in instantiating information structure (e.g.\ link
-\ensuremath{>} focus \ensuremath{>} tail)), they propose four types of
+order in instantiating information structure, such as link
+\ensuremath{>} focus \ensuremath{>} tail), they propose four types of
 sentential forms; link-focus, link-focus-tail, focus-tail, and
 all-focus. For example, (\ref{exe:engdahl:vallduvi:96:5}A1) is a
 link-focus construction, while (\ref{exe:engdahl:vallduvi:96:5}A2) is
@@ -167,15 +163,15 @@ A1: & {Yes. The \textbf{president} [$_{f}$ hates the
   living room. Was that a good idea?}\\ A2: & {Maybe. The
   \textbf{president} [$_{f}$ \textsc{hates}] the Delft chine set.} \\ & {(but
   the \textbf{first lady} \textsc{likes}
-  it.) \citep[p.\ 5]{engdahl:vallduvi:96}}\\
+  it.) \citep[5]{engdahl:vallduvi:96}}\\
 \end{tabular}}}
 
 
 This classification is similarly implemented as a hierarchy in
 \citet{paggio:09}, though the terms are different (i.e.\ \tdl{topic}
-for link, and \tdl{bg} (\isi{background}) for tail). The type
-hierarchy \citeauthor{paggio:09} proposes for \ili{Danish} is shown in
-Figure~\ref{fig:hier:paggio} (Ibid.\ p.\ 140), and the lowest subtypes
+for link, and \tdl{bg} for tail). The type
+hierarchy \citet[140]author{paggio:09} proposes for \ili{Danish} is shown in
+Figure~\ref{fig:hier:paggio}, and the lowest subtypes
 are exemplified in \myref{exe:paggio} respectively.
 
 
@@ -189,27 +185,29 @@ are exemplified in \myref{exe:paggio} respectively.
 \end{figure}
 
 
+
+
 \myexe{\eenumsentence{\toplabel{exe:paggio}
-\item\shortex{6} {(Hvad & lavede & b{\o}rnene?) & [$_{T}$ De] &
-  [$_{F}$ spiste & is].}  {(what & did & children.\textsc{def}) & they
-  & ate & icecream} {`What did the children do? They ate icecream.'
-  (\tdl{topic-focus})}
-\item\shortex{6} {(Hvad & spiste & b{\o}rnene?) & [$_{BG}$ [$_{T}$ De]
-    & spiste] & [$_{F}$ is].}  {(what & ate & children.\textsc{def}) &
-  they & ate & icecream} {`What did the children eat? They ate
-  icecream.' (\tdl{topic-focus-bg})}
-\item\shortex{7} {(Hvem & har & spist & isen?) & [$_{BG}$ Det & har] &
-  [$_{F}$ b{\o}rnene].}  {(who & has & eaten & icecream.\textsc{def})
-  & that & have & children.\textsc{def}} {`Who has eaten the icecream?
-  The children did.' (\tdl{bg-focus})}
-\item\shortex{6} {(Hvad & skete & der?) & [$_{F}$ B{\o}rnene & spiste]
-  & is].}  {(what & happened & there) & children.\textsc{def} & ate &
-    icecream} {`What happened? The children ate icecream.'
-    (\tdl{all-focus}) [dan] \citep[p.\ 139]{paggio:09}}}}
+\item\shortex{8}
+  {(Hvad & lavede & b{\o}rnene?) & [$_{T}$ & De] & [$_{F}$ & spiste & is].}
+  {(what & did & children.\textsc{def}) & & they & & ate & icecream}
+  {`What did the children do? They ate icecream.' (\tdl{topic-focus})}
+\item\shortex{9}
+  {(Hvad & spiste & b{\o}rnene?) & [$_{BG}$ & [$_{T}$ & De] & spiste] & [$_{F}$ & is].}
+  {(what & ate & children.\textsc{def}) & & & they & ate & & icecream}
+  {`What did the children eat? They ate icecream.' (\tdl{topic-focus-bg})}
+\item\shortex{9}
+  {(Hvem & har & spist & isen?) & [$_{BG}$ & Det & har] & [$_{F}$ & b{\o}rnene].}
+  {(who & has & eaten & icecream.\textsc{def}) & & that & have & & children.\textsc{def}}
+  {`Who has eaten the icecream? The children did.' (\tdl{bg-focus})}
+\item\shortex{7}
+  {(Hvad & skete & der?) & [$_{F}$ & B{\o}rnene & spiste]  & is].}
+  {(what & happened & there) & & children.\textsc{def} & ate & icecream}
+  {`What happened? The children ate icecream.' (\tdl{all-focus}) [dan] \citep[139]{paggio:09}}}}
 
 
 
-The present study agrees that information structure needs to be
+The present study concurs that information structure needs to be
 investigated as a subtype of sentential grammar
 \citep{lambrecht:96,engdahl:vallduvi:96,paggio:09}. However, the type
 hierarchy given in Figure~\ref{fig:hier:paggio} is altered in the
@@ -229,10 +227,10 @@ different linear orders notwithstanding, the present study claims that
 focus-tail.  \citet{paggio:09} calls the identificational \isi{focus}
 of (\ref{exe:paggio}c) \tdl{bg-focus} that serves to identify a
 referent as the missing argument of an open proposition
-\citep[p.\ 122]{lambrecht:96}.\footnote{The \tdl{bg-focus} sentential
-  form is similar to cleft constructions.\is{clefting}} For this
-reason, the type hierarchy for sentential forms in the current work is
-built up without an ordering constraint, exclusively considering which
+\citep[122]{lambrecht:96}.\footnote{The \tdl{bg-focus} sentential form
+  is similar to cleft constructions.\is{clefting}} For this reason,
+the type hierarchy for sentential forms in the current work is built
+up without an ordering constraint, exclusively considering which
 components participate in forming information structure.
 
 
@@ -240,7 +238,7 @@ components participate in forming information structure.
 
 
 
-\subsection{Location within the Feature Geometry}
+\subsection{Location within the feature geometry}
 \label{8:ssec:hpsg:context}
 
 Previous literature commonly introduces an independent typed feature
@@ -272,7 +270,7 @@ without introducing additional structure?  \citet{partee:91} also
 addresses this with her observations that information structure is not
 independent of truth-conditions.\is{truth-conditions} If information
 structure is truth-conditionally relevant, it should be represented in
-the semantics.  \citet{engdahl:vallduvi:96}, nevertheless, make use of
+the semantics.  \citet{engdahl:vallduvi:96}, nevertheless, invoke
 a separate representation in the belief that information structure and
 logical semantics have to be represented in the grammar in a modular
 manner. They leave the final resolution of these to components as a
@@ -313,15 +311,16 @@ grammatical operation more flexible and more economical. For example,
 (\ref{avm:engdahl:vallduvi:words}c) means that unaccented words leave
 their information structure value underspecified, facilitating varied
 meanings of an unmarked expression.\is{HPSG} \citet{kuhn:96} argues
-that using \isi{underspecification} is a more effective way to represent
-information structure; especially, for the purpose of implementing
-HPSG-based NLP applications (e.g.\ machine translation, \isi{TTS}
-(Text-To-Speech) systems, etc.).  However, underspecification has been
-scarcely used in previous HPSG-based studies on information structure.
-The current model relies on underspecified values of components of
-information structure.  More specific justifications of why
-underspecification is crucial for representing information structure
-are discussed in the following subsections.
+that using \isi{underspecification} is a more effective way to
+represent information structure; especially for the purpose of
+implementing HPSG-based NLP applications (e.g.\ machine translation,
+\isi{TTS} (Text-To-Speech) systems, etc.).  However,
+underspecification has been scarcely used in previous HPSG-based
+studies on information structure.  The current model relies on
+underspecified values of components of information structure.  More
+specific justifications as to why underspecification is crucial for
+representing information structure are discussed in the following
+subsections.
 
 
 \subsubsection{Prosody}
@@ -344,9 +343,9 @@ those of the latter stand for four levels of stress.
 \includegraphics{pdf/chang-prosody.pdf}}}}
 
 \noindent In his formalism, this structure has a correlation with
-another typed feature structure: namely PRA (PRAgmatics). Information
-structure values, such as topics and foci, are gathered into the
-lists under PRA{$\mid$}DF{$\mid$}TFA as presented in
+another typed feature structure, namely PRA (PRAgmatics). Information
+structure values, such as topics and foci, are gathered into the lists
+under PRA{$\mid$}DF{$\mid$}TFA as presented in
 \myref{avm:chang:pra}\footnote{DF stands for Discourse Function, and
   TFA means Topic-Focus Articulation. Additionally, SA is short for
   Speech Act, BKG is for BacKGround, POV is for Point-Of-View, and CTR
@@ -381,7 +380,7 @@ ii. & Contrastive Focus \\ & & \includegraphics{pdf/chang-tt.pdf} & &
 \noindent \citet{ohtani:matsumoto:04}, similarly, analyzed \wa-marked
 and \ga-marked NPs in Japanese: \textit{Wa}-marked NPs are interpreted
 as either \isi{topic}, restrictive \isi{focus} or non-restrictive
-focus,\footnote{In \citet[p.\ 95]{ohtani:matsumoto:04}, restrictive
+focus,\footnote{In \citet[95]{ohtani:matsumoto:04}, restrictive
   focus means wide focus.\is{wide focus}}  whereas \ga-marked NPs are interpreted as
 either restrictive focus or all focus.  Similarly to
 \myref{avm:chang:tf} in Korean, in the formalism
@@ -405,10 +404,10 @@ ii. & \evnup{\includegraphics{pdf/ohtani-matsumoto-ga2.pdf}} \\
 
 
 \myref{avm:chang:tf} and \myref{avm:ohtani:matsumoto:wa:ga}, though
-their formats slightly differ, are actually the Korean and Japanese
-variants of \myref{avm:engdahl:vallduvi:words} in \ili{English}.
-\citet{bildhauer:07} argues that it is rather unclear where the
-information about accents comes from.  This criticism seems
+their formats are slightly different, are actually the Korean and
+Japanese variants of \myref{avm:engdahl:vallduvi:words} in
+\ili{English}.  \citet{bildhauer:07} argues that it is rather unclear
+where the information about accents comes from.  This criticism seems
 appropriate when we think of the current computational environments
 for sentence processing. Because our applications are mostly
 text-based, for now it would be quite difficult to resolve for accent
@@ -422,43 +421,42 @@ between information structure and prosodic accents, the grammar can
 leverage information about stress to yield higher performance. Hence,
 it is important to allow the grammar formalism to model prosodic
 information using \isi{underspecification} \citep{kuhn:96}. I believe
-that this strategy contributes to the long term task of refining
+that this strategy contributes to the long-term task of refining
 meaning representation via prosodic information.
 
 
 
 However, there is a remaining controversial point embedded in
 \myref{avm:chang:tf} and \myref{avm:ohtani:matsumoto:wa:ga}.  In fact,
-they are tantamount to multiply and redundantly introducing \ika and
-\nun in Korean, and \ga and \wa in Japanese into the lexicon. For
-example, (\ref{avm:chang:tf}a) implies that the morphemes for
-introducing a zero \isi{topic} \nun, a thematic topic \nun, and a
-\isi{contrastive topic} \nun are three separate homonyms.  The use of
-multiple rules for \nun and \wa is an undesirable choice which should
-be avoided if possible.  Korean and Japanese very productively employ
-\nun and \wa, respectively, which means that having multiple lexical
-entries for \wa and \nun items in the respective grammars causes
-problematic amounts of spurious ambiguity.\footnote{Exploring the
-  \textit{Sejong} Korean Treebank reveals that subjects in Korean are
-  combined with \nun more than twice than the ordinary nominative
-  marker \ika.} In other words, if we include all the rules in
-(\ref{avm:chang:tf}a), every \nun-marked constituent produces spurious
-parse trees.  As a result, the number of parse trees can sometimes
-grow too large to handle.\footnote{In fact, this is one of the major
-  problems that cause a bottleneck in parsing and generation in the
-  old version of Korean Resource Grammar (a.k.a.\ \isi{KRG} \textit{ver.}
-  1). It had two types of \nun; one for topic, and the other for
-  contrast.\is{contrast} These two \nun sometimes had an adverse effect on system
-  performance.  Occasionally, even not a long sentence could have a
-  large number of parse trees if \nun occurs multiple times in the
-  sentence. Accordingly, the sentence could not be generated in most
-  cases because of memory overflow. For more information, see
-  \citet{song:etal:10}.}  If there is something that the
-multiple-entry approach captures that the single-entry approach does
-not, then we should use the former, because there could be a loss in
-information processing. Yet, as discussed hitherto, the lexical
+they are tantamount to redundantly introducing \ika and \nun in
+Korean, and \ga and \wa in Japanese into the lexicon. For example,
+(\ref{avm:chang:tf}a) implies that the morphemes for introducing a
+zero \isi{topic} \nun, a thematic topic \nun, and a \isi{contrastive
+  topic} \nun are three separate homonyms.  The use of multiple rules
+for \nun and \wa is an undesirable choice which should be avoided if
+possible.  Korean and Japanese very productively employ \nun and \wa,
+respectively, which means that having multiple lexical entries for \wa
+and \nun items in the respective grammars causes problematic amounts
+of spurious ambiguity.\footnote{Exploring the \textit{Sejong} Korean
+  Treebank reveals that subjects in Korean are combined with \nun more
+  than twice than the ordinary nominative marker \ika.} In other
+words, if we include all the rules in (\ref{avm:chang:tf}a), every
+\onun-marked constituent produces spurious parse trees.  As a result,
+the number of parse trees can sometimes grow too large to
+handle.\footnote{In fact, this is one of the major problems that cause
+  a bottleneck in parsing and generation in the old version of Korean
+  Resource Grammar.  It had two types of \nun; one for topic, and the
+  other for contrast.\is{contrast} These two \nun sometimes had an
+  adverse effect on system performance.  Occasionally, even not a long
+  sentence could have a large number of parse trees if \nun occurs
+  multiple times in the sentence. Accordingly, the sentence could not
+  be generated in most cases because of memory overflow. For more
+  information, see \citet{song:etal:10}.}  If there is something that
+the multiple-entry approach captures that the single-entry approach
+does not, then we should use the former, because there could be a loss
+in information processing. Yet, as discussed hitherto, the lexical
 markers (e.g.\ \nun and \wa) and the prosodic patterns each contribute
-only partial information. In other words, neither of them can be be a
+only partial information. In other words, neither of them can be a
 decisive clue for identifying which information structure meaning is
 assigned to a given constituent.
 
@@ -484,24 +482,25 @@ F(ocus)-marking is represented as a boolean feature (i.e.\ [FOCUS
 information structure via a boolean feature is also common in other
 unification-based frameworks. For instance, \citet{choi:99}, within
 the framework of \isi{LFG} (Lexical-Functional Grammar
-(\citealt{bresnan:01})), makes use of [\ensuremath{\pm} New] and
+\citealt{bresnan:01}), makes use of [\ensuremath{\pm} New] and
 [\ensuremath{\pm} Prom] as presented later in \myref{fig:choi}.  Other
 components of information structure are also similarly marked.  These
 include [TOPIC \tdl{bool}], [CONTRAST \tdl{bool}], [HIGHLIGHT
   \tdl{bool}], and so on. For instance, \citet{kim:07} claims that
 \textit{beer} in (\ref{exe:kim:beer}A) is constrained as in
-\myref{avm:kim:beer}. Since \textit{beer} in (\ref{exe:kim:beer}A) is
-contrastively focused (i.e.\ an answer to an alternative question
-\citep{gryllia:09}),\is{contrastive focuse} it has both [HIGHLIGHT +] and [FOCUS +] in his
-analysis. Note that [HIGHLIGHT \tdl{bool}] in \myref{avm:kim:beer}
-indicates whether or not the constituent conveys a contrastive
-meaning, which is almost the same as [CONTRAST \tdl{bool}].
+\myref{avm:kim:beer}. Since \textit{beer} in (\ref{exe:kim:beer}A)
+is contrastively focused (i.e.\ an answer to an alternative question
+\citealt{gryllia:09}),\is{contrastive focus} it has both [HIGHLIGHT +]
+and [FOCUS +] in his analysis. Note that [HIGHLIGHT \tdl{bool}] in
+\myref{avm:kim:beer} indicates whether or not the constituent conveys
+a contrastive meaning, which is almost the same as [CONTRAST
+  \tdl{bool}].
 
 
 \myexe{\enumsentence{\label{exe:kim:beer}
 \begin{tabular}[t]{ll}
 Q: & {Did John drink beer or coke?}\\ 
-A: & {John drank beer. \citep[p.\ 229]{kim:07}}\\
+A: & {John drank beer. \citep[229]{kim:07}}\\
 \end{tabular}}}
 
 \myexe{\enumsentence{\label{avm:kim:beer}\evnup{
@@ -513,12 +512,12 @@ representing information structure meaning. This is mainly because
 using boolean features would not allow us to represent information
 structure as a relationship between an entity and a clause. The
 current work encodes information structure into the semantic
-representation via \isi{ICONS} (Individual CONStraints).\is{individual
-  constraints} The main motivation for \isi{ICONS} is the ability to
+representation via \isi{ICONS} (Individual CONStraints).\is{Individual CONStraints}
+The main motivation for \isi{ICONS} is the ability to
 encode information structure values as a relationship with the clause
 an information structure-marked constituent belongs to, rather than as
 simply a property of the constituent itself.  Chapter~\ref{chapter9}
-provides fundamentals of \isi{ICONS} in detail.
+provides the fundamentals of \isi{ICONS} in detail.
 
 
 
@@ -534,12 +533,12 @@ The lexical markers \wa and \nun in Japanese and Korean are typical
 cases showing this kind of mismatch, and \myref{avm:kim:beer}
 illustrates via an example from Korean.  If \nun in Korean is used
 contrastively and an NP with it is focused,\is{contrast} then the NP in
-\citet{kim:07}'s AVMs would be constrained as either (i) [HIGHLIGHT +,
+\citeauthor{kim:07}'s AVMs would be constrained as either (i) [HIGHLIGHT +,
   TOPIC +] focusing on the NP-marking system or (ii) [HIGHLIGHT +,
   FOCUS +] putting more weight on the meaning. Another potential
 constraint on the NP would be [HIGHLIGHT +, FOCUS +, TOPIC +], but
 this analysis fails with respect to the basic assumption the present
-study is built on: Topic and focus are mutually exclusive.\footnote{As
+study is built on: topic and focus are mutually exclusive.\footnote{As
   stated earlier, there exist counterarguments to this generalization
   \citep{krifka:08}.}
 
@@ -560,7 +559,7 @@ robust computational model of information structure.
 
 
 
-\section{Information Structure in MRS}
+\section{Information structure in MRS}
 \label{8:sec:mrs}
 
 
@@ -570,9 +569,8 @@ instead represents information structure within the MRS semantic
 representations.\is{MRS} There are two motivations for doing so. The
 first motivation is that information structure impacts semantic
 properties. As discussed previously, information structure
-(especially, semantic \isi{focus} \citep{gundel:99}) is sometimes relevant
-to \isi{truth-conditions} and scopal interpretation (i.e.,\ topics
-take the widest scope)
+(especially, semantic \isi{focus}) is sometimes relevant to
+\isi{truth-conditions} \citep{gundel:99} and scopal interpretation
 \citep{buring:97,portner:yabushita:98,erteschik:99,erteschik:07,bianchi:frascarelli:10}.
 Hence, it is right to incorporate information structure into the
 meaning representation in a direct manner.  The second motivation is
@@ -580,6 +578,7 @@ strictly practical: The \isi{infrastructure} for machine translation
 does MRS-based transfer \citep{oepen:etal:07}, therefore encoding
 information structure into MRS facilitates its immediate availability
 for use in machine translation.\is{transfer-based}
+
 
 
 
@@ -593,8 +592,9 @@ typed feature structure to MRS (e.g.\ INDEX or RELS)
 
 
 \citet{wilcock:05}, to my knowledge, is the first attempt to use MRS
-for representing information structure, modeling the scope of \isi{focus}
-analogously to \isi{quantifier} scope (i.e.\ HCONS).\is{MRS}
+for representing information structure, modeling the scope of
+\isi{focus} analogously to \isi{quantifier} scope
+(i.e.\ HCONS).\is{MRS}
 
 
 \myexe{\eenumsentence{\label{exe:wilcock}
@@ -605,23 +605,24 @@ analogously to \isi{quantifier} scope (i.e.\ HCONS).\is{MRS}
 
 
 \noindent This is similar to the basic idea of the current analysis,
-in that information structure can be represented as a list of
-binary relations in the same way as HCONS is.\is{binary relation}
-The difference between \citeauthor{wilcock:05}'s proposal and that of the current
-analysis is that information structure in his model is represented as
-handles, whereas the current model represents the relationships
-between individuals and clauses as binary relations. This facilitates
-scaling to multiclausal constructions. For instance,
-(\ref{exe:wilcock}b) taken from \citet[p.\ 275]{wilcock:05} represents
-the wide \isi{focus} reading of (\ref{exe:wilcock}a) (i.e.\ from 3 to
-5). Note that in this representation, LINK (\tdl{topic} in this paper)
-and FOCUS have no relation to the clause or its head (\textit{hate}).\is{topic}
+in that information structure can be represented as a list of binary
+relations in the same way as HCONS is.\is{binary relation} The
+difference between \citeauthor{wilcock:05}'s proposal and that of the
+current analysis is that information structure in his model is
+represented as handles, whereas the current model represents the
+relationships between individuals and clauses as binary
+relations. This facilitates scaling to multiclausal constructions. For
+instance, (\ref{exe:wilcock}b) taken from \citet[275]{wilcock:05}
+represents the wide \isi{focus} reading of (\ref{exe:wilcock}a)
+(i.e.\ from 3 to 5). Note that in this representation, LINK
+(\tdl{topic} in this paper) and FOCUS have no relation to the clause
+or its head (\textit{hate}).\is{topic}
 
 
 
 
 
-\citet{yoshimoto:etal:06} uses MRS,\is{MRS} too. In their model,
+\citet{yoshimoto:etal:06} use MRS,\is{MRS} too. In their model,
 information structure values are unified with whole MRS predications
 rather than just indices. Based on this assumption, they apply the
 information structure values to analyzing floating quantifiers in
@@ -637,7 +638,7 @@ the MRS formalism, but the components of information structure in
 context, not the semantics. Though each component under
 CTXT\ensuremath{\mid}INFOSTR involves co-indexation with individuals
 in MRS, her approach cannot be directly applied to the \isi{\logon} MT
-\isi{\mbox{infrastructure}} which requires all transfer-related ingredients
+\isi{infrastructure} which requires all transfer-related ingredients
 to be accessible in MRS \citep{oepen:etal:07}.
 
 
@@ -650,7 +651,7 @@ identified with ones that appear in EPs in RELS, which is not
 applicable to the \isi{\logon} \isi{infrastructure} for the same
 reason as the \citet{paggio:09} model.\footnote{This, of course, does
   not mean that every grammar should be compatible with the
-  \isi{\logon} infrastructure. The ultimate goals of the present study
+  \isi{\logon} infrastructure. The ultimate goal of the present study
   is creating a computational library within the Grammar Matrix, which
   can be effectively used to enhance performance of HPSG/MRS-based MT
   systems. Given that \isi{\logon}, for now, is the readily available
@@ -663,10 +664,10 @@ Among the various methods presented so far, the method used by the
 present study most closely resembles that of \citet{paggio:09} in that
 individuals (the value type of INDEX) are constrained for
 representation of information structure (i.e.\ Individual
-CONStraints).\is{individual constraints} The main differences between
+CONStraints).\is{Individual CONStraints} The main differences between
 \citeauthor{paggio:09}'s approach and mine are as follows: First, I
-put the feature whose value represents information structure inside of
-CONT. Second, I represent information structure values using a type
+place the feature whose value represents information structure inside
+of CONT. Second, I represent information structure values using a type
 hierarchy of \tdl{info-str}.\is{\textit{info-str}} Third, the features
 to represent information structure involve a \isi{binary relation}
 between individuals and clauses. Chapter~\ref{chapter10} enters into
@@ -675,7 +676,7 @@ the implementation details.
 
 
 
-\section{Phonological Information in HPSG}
+\section{Phonological information in HPSG}
 \label{8:sec:phonology}
 
 Quite a few HPSG-based studies explore the effect of phonological
@@ -698,14 +699,14 @@ of systems in the long term.
 
 
 
-According to \citet{bildhauer:07}'s account, there are three
+According to the account of \citet{bildhauer:07}, there are three
 HPSG-based approaches to phonology; (i) metrical tree-based approaches
 \citep{klein:00,haji:03}, (ii) grid-only approaches
 \citep{bonami:delais:06}, and (iii) hybrid approaches that take
 advantage of the two former approaches (\citeauthor{bildhauer:07}'s
-own).  According to \citet[p.\ 160]{bildhauer:07}, the metrical
-tree-based approach provides a representation of prosodic consistency,
-but deploys only nested structure. This is a drawback when it comes to
+own).  According to \citet[160]{bildhauer:07}, the metrical tree-based
+approach provides a representation of prosodic consistency, but
+deploys only nested structure. This is a drawback when it comes to
 handling intonational tunes.  \citeauthor{bildhauer:07} also argues
 that while the grid-only approach of \citeauthor{bonami:delais:06}
 involves a basically flat representation, it is too language-specific
@@ -740,12 +741,12 @@ charge of (v) pitch accents,\is{focus prominence} and (vi) boundary
 tones. Building upon their operation, a schema of \isi{focus} prominence
 rules is suggested, mainly concentrating on the top level of prosodic
 hierarchy (i.e.\ phonological utterance). \citeauthor{bildhauer:07}'s
-formalism basically develops from \citet{klein:00}'s proposal that the
+formalism develops from \citeauthor{klein:00}'s proposal that the
 level of syllables does not matter, and instead the prosodic hierarchy
 is represented by prosodic words (\tdl{pwrd}) and leaners
 (\tdl{lnr}). The elementary unit of PHON is \tdl{pwrd}, whose skeleton
 is sketched out in \myref{fig:bildhauer:pwrd-or-lnr}
-\citep[p.\ 161]{bildhauer:07}.\footnote{In
+\citep[161]{bildhauer:07}.\footnote{In
   \myref{fig:bildhauer:pwrd-or-lnr}, the value of SEGS is a list of
   segments.}
 
@@ -760,11 +761,11 @@ UTterance. Each of them has \tdl{epr} meaning Edges and Prominence as
 its value type, whose typed feature structure is provided in
 \myref{fig:bildhauer:epr}; LE stands for Left Edge, RE for Right Edge,
 and most importantly DTE for Designated Terminal Element. Grounded
-upon the prosodic rules that \citet{bildhauer:07} creates, PHP, IP,
+upon the prosodic rules that \citet[181]{bildhauer:07} creates, PHP, IP,
 and UT are defined by a relational constraint, which places a
 restriction on LE, RE, and DTE values of \tdl{pwrd} objects and
 thereby specifies the relation that a prosodic word has to higher
-prosodic constituents (Ibid.\ p.\ 181).
+prosodic constituents.
 
 
 
@@ -774,13 +775,13 @@ prosodic constituents (Ibid.\ p.\ 181).
 
 Second, pitch accents (PA) and boundary tones (BD), which carry
 intonational information, take \tdl{tone-or-none} as their value
-type. \citet[p.\ 183]{bildhauer:07} provides the hierarchy of
+type. \citet[183--184]{bildhauer:07} provides the hierarchy of
 \tdl{tone-or-none} in \ili{Spanish} as follows, which is to be further
 revised for better cross-linguistic coverage in the present study.
 Each type name on the bottom line is an element in the ToBI
 format. For example, \tdl{high} means H, \tdl{low} means L, and
-\tdl{low-high-star} means L+H* (i.e.\ the B-accent in \ili{English}
-\citep{bolinger:61,jackendoff:72}).\is{B-accent}
+\tdl{low-high-star} means L+H* (i.e.\ the B-accent in \ili{English},
+\citealt{bolinger:61,jackendoff:72}).\is{B-accent}
 
 
 \myexe{\enumsentence{\label{fig:bildhauer:tone-or-none}\evnup{
@@ -788,10 +789,9 @@ format. For example, \tdl{high} means H, \tdl{low} means L, and
 
 
 \noindent Those pitch accents and boundary tones are related to
-\tdl{pwrd}, whose relationship is ruled as follows
-(Ibid.\ p.\ 183--184).  Pitch accents are attached to phonological
-phrases, and boundary tones are connected to intonational phrases
-\citep{steedman:00}.
+\tdl{pwrd}, whose relationship is ruled as follows.  Pitch accents are
+attached to phonological phrases, and boundary tones are connected to
+intonational phrases \citep{steedman:00}.
 
 
 \myexe{\eenumsentence{\label{avm:bildhauer:rules}
@@ -802,17 +802,15 @@ phrases, and boundary tones are connected to intonational phrases
 
 
 
-It is my position that \citet{bildhauer:07}'s proposal looks
-cross-linguistically convincing. Therefore, the type
-hierarchy of \tdl{tone} and the typed feature structure for
-phonological structure \citeauthor{bildhauer:07} presents are
-described in \texttt{matrix.tdl} though they are not implemented in a
-systemic way.  Although the current work is not deeply concerned with
-prosodic realizations of information structure, information relevant
-to those realizations should be included into the system as its a
-common structure in human languages. This is highly motivated by the
-necessity to refer to prosodic patterns for further refinement of
-meaning representation in future studies.
+Given that \citet{bildhauer:07} provides a cross-linguistically
+convincing proposal as such, the type hierarchy of \tdl{tone} and the
+typed feature structure for phonological structure are described in
+\texttt{matrix.tdl}.  Although the current work is not deeply
+concerned with prosodic realizations of information structure,
+information relevant to those realizations should be included into the
+system as its a common structure in human languages. This is highly
+motivated by the necessity to refer to prosodic patterns for further
+refinement of meaning representation in future studies.
 
 
 
@@ -833,38 +831,38 @@ almost impossible for the current model to implement and test
 
 
 
-\section{Information Structure in Other Frameworks}
+\section{Information structure in other frameworks}
 \label{8:sec:other-frameworks}
 
 
-\subsection{CCG-based Studies}
+\subsection{CCG-based studies}
 \label{8:ssec:ccg}
 
-The \isi{CCG} (Combinatory Categorial Grammar,
-(\citealt{steedman:01})) framework, which provides a detailed analysis
-of the relationship between intonation and other structures
-(e.g.\ syntax, semantics, and pragmatics), has addressed information
-structure since the early days of the theory
-\citep{steedman:00}.\footnote{CCG departing from CC (Categorial
-  Grammar) has two versions of formalism, whose history of progress is
-  also deeply related to incorporating information structure into the
-  formalism. The first development of CG theories is called UCG
-  (Unification Categorial Grammar, \cite{zeevat:87}), which employs an
-  HPSG-style typed feature structures (i.e.\ \tdl{sign}). The
-  HPSG-style formalism facilitates more efficient co-operation of
-  interface across grammatical layers (e.g.\ syntax, semantics,
-  etc.). The second development is UCCG (Unificational Combinatory
-  Categorial Grammar, \citep{traat:bos:04}), which integrates CCG and
-  UCG, and then adds DRT (Discourse Representation Theory,
-  \citep{kamp:reyle:93}) into the formalism, in order to facilitate a
-  compositional analysis of information structure.  Roughly speaking,
-  those categorial grammars replace phrasal structure rules by lexical
-  categories and general combinatory rules. In other words, the CCG
-  framework associates syntactically potent elements with a syntactic
-  category that identifies them as functors. There are two major rules
-  to combine with functional categories and their arguments, which
-  specify directionality such as (i) forward application represented
-  as `\ensuremath{>}' and (ii) backward application represented as
+The \isi{CCG} (Combinatory Categorial Grammar, \citealt{steedman:01})
+framework, which provides a detailed analysis of the relationship
+between intonation and other structures (e.g.\ syntax, semantics, and
+pragmatics), has addressed information structure since the early days
+of the theory \citep{steedman:00}.\footnote{CCG departing from CC
+  (Categorial Grammar) has two versions of formalism, whose history of
+  progress is also deeply related to incorporating information
+  structure into the formalism. The first development of CG theories
+  is called UCG (Unification Categorial Grammar, \citealt{zeevat:87}),
+  which employs an HPSG-style typed feature structures
+  (i.e.\ \tdl{sign}). The HPSG-style formalism facilitates more
+  efficient co-operation of interface across grammatical layers
+  (e.g.\ syntax, semantics, etc.). The second development is UCCG
+  (Unificational Combinatory Categorial Grammar,
+  \citealt{traat:bos:04}), which integrates CCG and UCG, and then adds
+  DRT (Discourse Representation Theory, \citealt{kamp:reyle:93}) into
+  the formalism, in order to facilitate a compositional analysis of
+  information structure.  Roughly speaking, those categorial grammars
+  replace phrasal structure rules by lexical categories and general
+  combinatory rules. In other words, the CCG framework associates
+  syntactically potent elements with a syntactic category that
+  identifies them as functors. There are two major rules to combine
+  with functional categories and their arguments, which specify
+  directionality such as (i) forward application represented as
+  `\ensuremath{>}' and (ii) backward application represented as
   `\ensuremath{<}'.} Consequently, one of the main characteristics of
 CCG is that it is particularly and deeply oriented toward information
 structure. Moreover, several CCG-based studies have accounted for how
@@ -899,7 +897,7 @@ tone. Therefore, in \citeauthor{steedman:00}'s analysis of information
 structure in \ili{English}, the L+H* and LH\% tune is associated with
 the theme, and the H* L and H* LL\% tunes are associated with the
 rheme. For instance, a surface structure \textit{Anna married Manny.}
-can be analyzed as follows \citep[p.\ 302]{traat:bos:04}.
+can be analyzed as follows \citep[302]{traat:bos:04}.
 
 
 
@@ -932,15 +930,12 @@ boolean type.
 
 The CCG-based studies have several key implications for my
 work. First, they pay particular attention to the creation of a
-computational model for information structure.  In particular,
+computational model for information structure with an eye toward
+implementing applications from the beginning.  In particular,
 \citet{traat:bos:04} argue that an information structure-based
 computational model should be used for both parsing and generation,
-and conduct an experiment to verify that their model works.  That is
-to say, while many previous studies based on other frameworks do not
-present how their analysis could be computationally implemented,
-design their model with an eye toward implementing information
-structure-based applications from the beginning.  The information
-structure-based model used here was created with the same
+and conduct an experiment to verify that their model works.  The
+information structure-based model used here was created with the same
 considerations in mind. This computational model, developed in the
 context of \isi{grammar engineering}, can be used not only for parsing
 human sentences into semantic representations but also for generating
@@ -948,17 +943,16 @@ sentences using that representation.  Second,
 \citeauthor{traat:bos:04} make use of prosodically annotated strings
 as input for their experiment, because current automatic speech
 recognizers do not provide enriched prosodic information.  In the
-current experiment, I employ two suffixes (e.g.\ `-a' for the
-A-accent, `-b' for the B-accent) that hypothetically represent
-prosodic information (see
-\myS{12:sec:machinery} \mypage{12:sec:machinery}).  Though I am not
-working with naturally occurring speech, the `-a' and `-b' suffixes
+current experiment, I employ two suffixes (e.g.\ 	\textit{-a} for the
+A-accent, 	\textit{-b} for the B-accent) that hypothetically represent
+prosodic information (see Section \ref{12:sec:machinery}).  Though I am not
+working with naturally occurring speech, the 	\textit{-a} and 	\textit{-b} suffixes
 are inspired by prosodic annotation.  Lastly, the CCG-based studies
 include prosodic information in their formalism in a fine-grained way
 and also create linguistic rules in which prosodic information and
 information structure interact with each other in a systemic way.  My
 model does not yet fully use prosodic information for the reasons
-discussed in \myS{8:sec:phonology},\is{prosody} but future work will
+discussed in Section \ref{8:sec:phonology},\is{prosody} but future work will
 look at how to systematize the interaction between prosody and
 information structure, taking CCG-based work as a starting point and
 guide.  Although the current model is mainly concerned with text
@@ -970,7 +964,7 @@ pre-tagging of information structure, and/or through mark-up like
 
 
 
-\subsection{LFG-based Studies}
+\subsection{LFG-based studies}
 \label{8:ssec:lfg}
 
 
@@ -1037,8 +1031,8 @@ proposed in \citet{choi:99}, who classifies (i) \isi{focus} into (i-a)
 completive focus involving new information and (i-b) \isi{contrastive focus}
 entailing alternatives in a set,\is{alternative set} and makes a
 clear-cut distinction between (ii) \isi{topic} and (iii) tail using
-[\ensuremath{\pm} prominent]. Her cross-classification between them is
-sketched out in \myref{fig:choi} (Ibid.\ p.\ 92).\footnote{In
+[\ensuremath{\pm} prominent]. \citeauthor{choi:99}'s cross-classification between them is
+sketched out in \myref{fig:choi}.\footnote{In
   \myref{fig:choi}, Prom is short for Prominence.}
 \citeauthor{choi:99} applies this classification to the representation
 of information structure in \ili{Korean}, and \citet{man:07} applies
@@ -1061,8 +1055,8 @@ subordinate clause and the main clause that the subordinate clause
 belongs to. In other words, subordinate clauses constitute their own
 information structure, but the relation to their main clauses
 additionally needs to be represented with respect to information
-structure.  This is discussed in more detail in \myS{9:ssec:binary}
-and \myS{10:ssec:relative:background}.  Second, LFG-based studies deal
+structure.  This is discussed in more detail in Section \ref{9:ssec:binary}
+and Section \ref{10:ssec:relative:background}.  Second, LFG-based studies deal
 with a variety of constructions in the study of information structure,
 whereas a large number of studies based on other frameworks treat only
 simple declarative sentences. The construction types that LFG-based
@@ -1103,14 +1097,14 @@ sentential form in relation to information structure. This motivation
 is also importantly applied to my model. Nevertheless, the present
 study differs from previous studies in several key ways. First,
 \isi{underspecification} is not widely used in the previous studies,
-but the current model emphasizes underspecification as key to the
+but the current model emphasizes underspecification as a key to the
 representation of information structure. Second, while most previous
 studies do not differentiate information structure marking and
 information structure meaning, the two are entirely distinct in the
 current model. Third, information structure is represented only under
 CONT(ent) (i.e.\ MRS)\is{MRS} in the current model rather than in a
 seperate structure. Fourth, prosodic information is selectively
-incorporated into the formalism; in accordance with what
+incorporated into the formalism, in accordance with what
 \citet{bildhauer:07} suggests from a big picture perspective, but with
 the direct application of his specific rules.  The implementation
 details are discusses in the following chapters in addition to several

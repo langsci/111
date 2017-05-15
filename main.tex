@@ -9,30 +9,78 @@
 % Some lines start with %. Remove the % to include them
 
 \documentclass[output=book,
-                      nonflat,
-                      modfonts,
-%                       colorlinks,
-%                       showindex  
+modfonts,
+nonflat,
+% nobabel,
+colorlinks,
+draft,draftmode
 		  ]{langsci/langscibook}    
-		  
+  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                              %%%
 %%%          additional packages                 %%%
 %%%                                              %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% put all additional commands you need in the 
+% following files. If you do not know what this might 
+% mean, you can safely ignore this section
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{lingmacros}
+\usepackage{umoline}
+\usepackage{setspace}
+%\usepackage{tipa}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{url}
+
+\newcommand{\tdl}[1]{\textit{#1}}
+%\newcommand{\myexe}[1]{{\small #1}}
+\newcommand{\myexe}[1]{{\normalsize #1}}
+\newcommand{\mysub}[1]{$_{\textnormal{\tiny{#1}}}$}
+\newcommand{\mysout}[1]{\Midline{#1}\xspace}
+\newcommand{\myemp}[1]{\textbf{\underline{#1}}}
+\newcommand{\myref}[1]{(\ref{#1})\xspace}
+\newcommand{\myS}[1]{\S\ref{#1}\xspace}
+\newcommand{\mysec}[1]{\S\ref{#1}\xspace}
+%\newcommand{\myurl}[1]{{\small\url{#1}}}
+\newcommand{\myurl}[1]{\url{#1}}
+\newcommand{\mypage}[1]{(p.\ \pageref{#1})}
+\newcommand{\mypp}[1]{(\ref{#1},~p.\ \pageref{#1})~}
+\newcommand{\xtab}{\xspace\xspace\xspace}
+\newcommand{\lingo}{LinGO\xspace}
+\newcommand{\lkb}{\textsc{\small LKB}\xspace}
+\newcommand{\pet}{\textsc{\small PET}\xspace}
+\newcommand{\ace}{\textsc{\small ACE}\xspace}
+\newcommand{\agree}{\textit{agree}\xspace}
+\newcommand{\itsdb}{\mbox{\textsf{\lbrack incr tsdb()\rbrack}\xspace}}
+\newcommand{\logon}{\textsc{\small LOGON}\xspace}
+\newcommand{\vs}{vs.\ }
+\newcommand{\nun}{-(\textit{n})\textit{un}\xspace}
+\newcommand{\onun}{(\textit{n})\textit{un}\xspace}
+\newcommand{\ika}{\textit{i} / \textit{ka}\xspace}
+\newcommand{\lul}{(\textit{l})\textit{ul}\xspace}
+\newcommand{\wa}{\textit{wa}\xspace}
+\newcommand{\ga}{\textit{ga}\xspace}
+
+
+
 \input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localhyphenation.tex}
 \input{localcommands.tex} 
-\bibliography{sanghounsong} 
+\bibliography{localbibliography,sanghounsong} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                              %%%
 %%%             Frontmatter                      %%%
 %%%                                              %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}         
 \maketitle                
 \frontmatter

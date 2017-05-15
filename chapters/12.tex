@@ -1,4 +1,4 @@
-\chapter{Customizing Information Structure}
+\chapter{Customizing information structure}
 \label{chapter11}
 \setcounter{enums}{0}
 
@@ -157,15 +157,15 @@ Second, starter grammars serve as a departure point to those who want
 to construct broad-coverage implemented grammars, and sometimes
 presents directions for improvement to an existing grammar. Thus far,
 the \lingo \isi{Grammar Matrix} has been used to construct new
-HPSG/MRS-based grammars (e.g.\ \isi{BURGER} (BUlgarian Resource
-Grammar -- Efficient and Realistic, \citealt{osenova:11}) for
-\ili{Bulgarian}), and to improve existing grammars (e.g.\ KRG2 for
-\ili{Korean},\is{KRG} \citealt{song:etal:10}).
+HPSG/MRS-based grammars (e.g.\ \isi{BURGER}, BUlgarian Resource
+Grammar -- Efficient and Realistic, \citealt{osenova:11}),\il{Bulgarian}
+and to improve existing grammars (e.g.\ \isi{KRG}2, \ili{Korean}
+Resource Grammar \textit{ver}. 2, \citealt{song:etal:10}).
 
 
 
 
-\section{Type Description Language}
+\section{Type description language}
 \label{2:sec:tdl}
 
 The grammatical fragments the current work creates are written in
@@ -213,13 +213,13 @@ a,b,c !\ensuremath{>} can be represented as in \myref{tdl:diff-list}.
 
 
 
-\section{The Questionnaire}
+\section{The questionnaire}
 \label{11:sec:questionnaire}
 
 The first task of implementing the customization system's information
 structure library centers around adding an HTML-based page to the
 web-based questionnaire.  The ``Information Structure'' page is
-comprised of four sections: namely ``Focus'', ``Topic'', ``Contrastive
+comprised of four sections, namely ``Focus'', ``Topic'', ``Contrastive
 Focus'', and ``Contrastive Topic''.\is{lexical markers}\is{contrastive
   topic}\is{contrastive focus} Each section, except the last one,
 consists of two subparts:\is{syntactic positioning} one for syntactic
@@ -257,18 +257,18 @@ being marked for
 
 Users can add one or more \isi{focus} markers.\is{adposition} The type
 of a focus marker is either an affix, an adposition, or a modifier as
-surveyed in \myS{4:sec:lexical}
+surveyed in Section \ref{4:sec:lexical}
 \mypage{4:sec:lexical}. Affixes are treated in the morphological
 paradigm (i.e.\ \texttt{irules.tdl}), while the other two are treated
 like a word (i.e.\ \texttt{lexicon.tdl}). The distinction between the
-last two is also discussed in \myS{4:sec:lexical}:\is{lexical markers}
+last two is also discussed in Section \ref{4:sec:lexical}:\is{lexical markers}
 If a language employs case-marking adpositions and a lexical marker to
 express focus and/or \isi{topic} is in complementary distribution with
 the case-marking adpositions, the marker is categorized as an
 adposition in principle. Otherwise, the marker is treated as just a
 modifier.\footnote{Nonetheless, the users of the \lingo Grammar Matrix
   system may have the flexibility to describe what the users see in
-  their language following \citet{poulson:11}'s meta-modeling idea.}
+  their language following the meta-modeling idea of \citet{poulson:11}.}
 Specific forms for information-structure marking affixes and
 adpositions are not specified in the ``Information Structure'' page,
 and instead they should be defined in the ``Morphology'' and
@@ -291,7 +291,7 @@ nouns and/or verbs.
 
 For instance, Figure~\ref{screenshot:focus} is illustrative of users'
 choices on ``Focus''. As mentioned earlier in
-\myS{4:ssec:categorical} \mypage{4:ssec:categorical}, one lexical
+Section \ref{4:ssec:categorical} \mypage{4:ssec:categorical}, one lexical
 marker may be used to signal \isi{focus} to both nominal and verbal
 items.\is{lexical markers} One lexical marker may occur sometimes before focused
 constituents and sometimes after them. Thus, the users can take
@@ -310,10 +310,11 @@ restriction is provided for the languages in which \isi{topic} always
 occupies the sentence-initial position. Next, one or more topic
 markers can be added, which operate in the same way as the ``Add a
 Focus Marker'' button discussed above.  As shown in
-\myS{3:sssec:verbal-topics} \mypage{3:sssec:verbal-topics}, verbal
-items can be topicalized in some languages (e.g.\ \ili{Paumar{\'{\i}}}
-\citep{chapman:81}).  Thus, [verbs] in Figure~\ref{screenshot:topic}
-is selected for illustrating the language-specific constraint.
+Section \ref{3:sssec:verbal-topics} \mypage{3:sssec:verbal-topics}, verbal
+items can be topicalized in some languages
+(e.g.\ \ili{Paumar{\'{\i}}}, \citealt{chapman:81}).  Thus, [verbs] in
+Figure~\ref{screenshot:topic} is selected for illustrating the
+language-specific constraint.
 
 \begin{figure}[!t]
 \begin{center} 
@@ -327,7 +328,7 @@ is selected for illustrating the language-specific constraint.
 
 
 
-\subsection{Contrastive Focus}
+\subsection{Contrastive focus}
 \label{11:ssec:questionnaire-cf}
 
 Third, \isi{contrastive focus} may or may not be marked differently
@@ -352,18 +353,18 @@ using the same tools and selectors as other markers.
 \end{figure}
 
 
-\subsection{Contrastive Topic}
+\subsection{Contrastive topic}
 \label{11:ssec:questionnaire-ct}
 
-Finally, there is an option for ``Contrastive Topic''.\is{contrastive topic}
-According to the cross-linguistic survey the present study has conducted, there
-seems to be no language in which contrastive topics have a constraint
-on positioning, and this is also supported by several previous
-analyses
+Finally, there is an option for ``Contrastive Topic''.\is{contrastive
+  topic} According to the cross-linguistic survey the present study
+has conducted, there seems to be no language in which contrastive
+topics have a constraint on positioning, and this is also supported by
+several previous analyses
 \citep{choi:99,erteschik:07,bianchi:frascarelli:10}. Accordingly,
 there is no checkbox for adding a position constraint. On the other
 hand, some languages employ a \isi{contrastive topic} marker
-(e.g.\ \textit{th{\`i}} in Vietnamese \citep{nguyen:06}). These can
+(e.g.\ \textit{th{\`i}} in Vietnamese, \citealt{nguyen:06}). These can
 also be specified using the button ``Add a Contrastive Topic Marker''.
 
 \begin{figure}[!t]
@@ -376,14 +377,14 @@ also be specified using the button ``Add a Contrastive Topic Marker''.
 
 
 
-\section{The Matrix Core}
+\section{The Matrix core}
 \label{11:sec:matrix}
 
 
 
 
 The next task was to incorporate the analysis based on ICONS
-(Individual CONStraints)\is{individual constraints} into the Matrix
+(Individual CONStraints)\is{Individual CONStraints} into the Matrix
 core. The core \isi{TDL} fragments written in \texttt{matrix.tdl}
 define universally useful types in widespread linguistic phenomena.
 Notably, integrating \isi{ICONS} into the grammar requires editing
@@ -411,7 +412,7 @@ edited as containing ICONS-related features, such as [ICONS-KEY
   \tdl{icons}] and [CLAUSE-KEY \tdl{event}] under \tdl{hook}, and
 [ICONS \tdl{diff-list}] under \tdl{mrs}. The \isi{TDL} statements for
 representing \tdl{info-str} is presented in \myref{tdl:info-str}
-(cf.\ Figure~\ref{fig:info-str} \mypage{fig:info-str}).\is{CLAUSE-KEY}\is{ICONS}\is{\textit{info-str}}
+(cf.\ Figure~\ref{fig:info-str}).\is{CLAUSE-KEY}\is{ICONS}\is{\textit{info-str}}
 
 
 \myexe{\enumsentence{\label{tdl:info-str}
@@ -431,7 +432,7 @@ C-CONT{$\mid$}ICONS is specified as an empty list.
 
 
 
-\subsection{Lexical Types}
+\subsection{Lexical types}
 \label{11:ssec:lt}
 
 
@@ -439,8 +440,7 @@ C-CONT{$\mid$}ICONS is specified as an empty list.
 Regarding lexical types, the set of types used for marking \tdl{icons}
 within a lexical item, such as \tdl{no-icons-lex-item},
 \tdl{basic-icons-lex-item}, \tdl{one-icons-lex-item}, and
-\tdl{two-icons-lex-item}
-(\myS{10:sec:lexical} \mypage{avm:icons-lex-item}), were written as
+\tdl{two-icons-lex-item} (Section \ref{10:sec:lexical}), were written as
 \isi{TDL} statements. Lexical types for constraining ARG-ST
 (ARGument-STructure) inherit from one of them and impose some
 additional constraints on CLAUSE-KEY.  For example,
@@ -469,10 +469,9 @@ impose a constraint on the element of \tdl{info-str}.  For instance,
 the type \tdl{clausal-second-arg-trans-lex-item}, which is reponsible
 for the AGT-ST of verb classes which take a clausal complement
 (e.g.\ \textit{think}, \textit{ask}), is defined as shown in
-(\ref{tdl-one-icons-lex-item:b}) (see
-\myS{10:ssec:embedded} \mypage{10:ssec:embedded}).  Note that the
-INDEX of the second argument (i.e.\ a clausal complement) and the
-TARGET of the element in the \isi{ICONS} list are co-indexed
+(\ref{tdl-one-icons-lex-item:b}) (see Section \ref{10:ssec:embedded}).  Note
+that the INDEX of the second argument (i.e.\ a clausal complement) and
+the TARGET of the element in the \isi{ICONS} list are co-indexed
 (\texttt{\#target}).
 
 
@@ -489,7 +488,7 @@ TARGET of the element in the \isi{ICONS} list are co-indexed
 
 
 
-\subsection{Lexical Rules}
+\subsection{Lexical rules}
 \label{11:ssec:lr}
 
 There are two types of lexical rules. One introduces an element of
@@ -503,7 +502,7 @@ while leaving ICONS underspecified.\is{underspecification} These rules
 are also used for phrase structure rules as well.
 
 
-\subsection{Phrase Structure Rules}
+\subsection{Phrase structure rules}
 \label{11:ssec:phr}
 
 
@@ -511,16 +510,16 @@ First, \tdl{basic-head-subj-phrase}, \tdl{basic-head-comp-phrase},
 \tdl{basic-head-spec-phrase}, and \tdl{basic-bare-np-phrase} inherit
 from \tdl{no-ccont-rule}. Therefore, they have an empty \isi{ICONS}
 list.  Second, I edited two phrase structure rules for argument
-optionality:\is{argument optionality} namely
+optionality,\is{argument optionality} namely
 \tdl{basic-head-opt-subj-phrase} and
-\tdl{basic-head-opt-comp-phrase}.\is{argument-optionality} They
+\tdl{basic-head-opt-comp-phrase}.\is{argument optionality} They
 introduce an \isi{ICONS} element that indicates the value of
 information structure the dropped argument has (i.e.\ \tdl{non-focus})
 into C-CONT{$\mid$}ICONS. This constraint is in line with my analysis
-presented in \myS{10:sec:arg-opt} \mypage{avm:opt}.  Third, I modified
+presented in Section \ref{10:sec:arg-opt} \mypage{avm:opt}.  Third, I modified
 \tdl{basic-head-mod-phrase-simple} (a subtype of
 \tdl{head-mod-phrase}) in accordance with the AVM presented in
-\myS{10:sec:monoclausal} \mypage{avm:head-mod-phrase}: now it has an
+Section \ref{10:sec:monoclausal} \mypage{avm:head-mod-phrase}: now it has an
 empty list in C-CONT{$\mid$}ICONS, and the CLAUSE-KEY of modifiers
 (NON-HEAD-DTR) and that of their modificands are co-indexed with each
 other.\is{CLAUSE-KEY} Finally, \tdl{head-filler-phrase} does not
@@ -547,7 +546,7 @@ dislocation.
 
 
 
-\section{Customized Grammar Creation}
+\section{Customized grammar creation}
 \label{11:sec:creation}
 
 The third task is to implement the Python code to customize the users'
@@ -578,7 +577,7 @@ transmitted into the customization script for information structure.
 
 
 
-\subsection{Lexical Markers}
+\subsection{Lexical markers}
 \label{11:ssec:lex}
 
 There are three types of lexical markers: (i) affixes, (ii)
@@ -600,13 +599,13 @@ the last type of marker.
 (i) Affixes are customized by \texttt{morphotactics.py}.  If a lexical
 rule imposes a constraint on information structure meaning, the
 lexical rule inherits from \tdl{no-rels-hcons-rule} (explained before
-in (\myS{11:ssec:lr}) and introduces an element of \tdl{info-str} into
+in (Section \ref{11:ssec:lr}) and introduces an element of \tdl{info-str} into
 C-CONT{$\mid$}ICONS.\is{\textit{info-str}} Otherwise, it inherits just
 from \tdl{add-only-no-ccont-rule} (or other lexical rules with an
 empty C-CONT{$\mid$}ICONS). For instance, theree TDL statements
 presented in \myref{tdl:affix} are responsible for a focus-marking
 suffix, and introduces a value of \tdl{info-str} into ICONS. Note the
-two coreference tags in \tdl{add-icons-rule}: namely \#icons and
+two coreference tags in \tdl{add-icons-rule}, namely \#icons and
 \#target.
 
 
@@ -622,7 +621,7 @@ is provided in \myref{tdl:adp}. In this case, the adposition lexically
 includes a value of \tdl{info-str} in CONT{$\mid$}ICONS, and the
 TARGET is co-indexed with the INDEX of the complement. This works in
 the same manner as \ga and \wa in \ili{Japanese} as presented
-previously in \myS{9:ssec:jpn:kor} \mypage{avm:ga:wa:jpn}.
+previously in Section \ref{9:ssec:jpn:kor} \mypage{avm:ga:wa:jpn}.
 
 \myexe{\enumsentence{\toplabel{tdl:adp}
 \evnup{\includegraphics{pdf/tdl-adp.pdf}}}}
@@ -667,7 +666,7 @@ marking modifier is specified in \texttt{lexicon.tdl}.
 
 
 
-\subsection{Syntactic Positioning}
+\subsection{Syntactic positioning}
 \label{11:ssec:ph}
 
 
@@ -678,12 +677,12 @@ in a specific position. As an initial step, the script merges the
 users' choices into a single type. For example, if a language places
 focused constituents in the clause-initial position and the language
 has the topic-first restriction, clause-initial constituents
-\textit{ex situ} are specified as \tdl{focus-or-topic} in the
+ex situ are specified as \tdl{focus-or-topic} in the
 language.\is{clause-initial}
 
 
 
-As mentioned in \myS{11:ssec:phr}, languages with a \isi{fixed word
+As mentioned in Section \ref{11:ssec:phr}, languages with a \isi{fixed word
   order} (e.g.\ SVO, SOV, VSO, VOS, OSV, and OVS) employ a specific
 type of \tdl{head-filler-phrase} for clause-initial and clause-final
 \isi{focus} and clause-initial
@@ -731,7 +730,7 @@ If the user's language employs a \isi{fixed word order}, \isi{preverbal} and
 by specific types of \tdl{head-subj-phrase} and
 \tdl{head-comp-phrase}.  Since \isi{preverbal}/\isi{postverbal} foci are
 immediately adjoined to the verb or the verb cluster,\footnote{See the
-  Basque example presented in \myS{9:ssec:lightness}
+  Basque example presented in Section \ref{9:ssec:lightness}
   \mypage{exe:urbina:focus:ch10-1}, in which the subject is combined
   with a verb plus an auxiliary.\is{auxiliary}} 
   they do not behave as a syntactic filler.\is{lightness}
@@ -739,7 +738,7 @@ Such a specific phrasal type imposes \mbox{[LIGHT +]} on the
 HEAD-DTR and \mbox{[ICONS-KEY \tdl{focus}]} (or a subtype of
 \tdl{focus}) on the NON-HEAD-DTR.\is{ICONS-KEY}
 What is significant here is using a
-flag feature: namely INFOSTR-FLAG.  This feature indicates whether a
+flag feature, namely INFOSTR-FLAG.  This feature indicates whether a
 constituent can be used as the \isi{preverbal} and \isi{postverbal}
 focus. \tdl{Narrow-focused-phrase},\is{narrow focus} presented in (\ref{tdl:nf:a}), is a
 unary phrase structure rule that specifies the plus value of
@@ -776,17 +775,17 @@ subtype of \tdl{head-filler-phrase} is introduced. Instead,
 depending on the positioning constraint(s).  Such a twofold strategy
 is the same as how scrambling in \ili{Japanese} and \ili{Korean} is
 constrained with respect to information structure roles
-(\myS{10:sec:scrambling}).\is{\textit{info-str}} In this case, the
-flag feature INFOSTR-FLAG is also used, because arguments \textit{ex
-  situ} introduce an \tdl{info-str} element into \isi{ICONS} while
-arguments \textit{in situ} do not. INFOSTR-FLAG serves to make a
+(Section \ref{10:sec:scrambling}).\is{\textit{info-str}} In this case, the
+flag feature INFOSTR-FLAG is also used, because arguments ex
+situ introduce an \tdl{info-str} element into \isi{ICONS} while
+arguments in situ do not. INFOSTR-FLAG serves to make a
 distinction between them. That is, this strategy is almost the same to
 that in languages that employ a \isi{fixed word order} and place
 focused constituents in the \isi{preverbal} or \isi{postverbal}
 position. The same goes for V2 languages.\is{V2 languages}  If a language employs the
 V2 word order (e.g.\ \ili{Yiddish}), all information structure-marked
 constituents are dealt with in the same way as in
-(\ref{tdl:nf:a}-\ref{tdl:nf:c}).  \myS{13:sec:collage} shows how
+(\ref{tdl:nf:a}-\ref{tdl:nf:c}).  Section \ref{13:sec:collage} shows how
 information structure in V2 languages is customized with reference to
 two particular V2 languages: \ili{Frisian} and \ili{Yiddish}.
 
@@ -811,14 +810,14 @@ should be thoroughly investigated in future work.
 
 
 
-\section{Regression Testing}
+\section{Regression testing}
 \label{13:sec:pseudo}
 
 
 When developing a grammar library, regression testing using
 \isi{testsuites} (a collection of sentences intended to demonstrate
-the capabilities of the implementation) is crucial
-\citep{bender:etal:07}.  Using a set of testsuites, regression testing
+the capabilities of the implementation, \citealt{bender:etal:07}) is crucial. 
+Using a set of testsuites, regression testing
 checks if a new implementation works well with all the previous
 functionality in the development of software.  That is to say,
 regression testing ensures that the newly adapted development is not
@@ -875,7 +874,7 @@ constituents in the clause-initial position.\is{clause-initial}
 
 
 
-\subsection{Pseudo Grammars}
+\subsection{Pseudo grammars}
 \label{13:ssec:grammars}
 
 
@@ -904,9 +903,9 @@ marking in human language.
 
 First, I referred to the choices of word order and \isi{focus}
 position. There are nine options of word order, excluding \isi{free
-  word order}: namely SVO, SOV, VSO, VOS, OSV, OVS, v-final,
+  word order}, namely SVO, SOV, VSO, VOS, OSV, OVS, v-final,
 v-initial, and v2. On the other hand, there are four options of focus
-positions: namely \isi{clause-initial}, \isi{clause-final},
+positions, namely \isi{clause-initial}, \isi{clause-final},
 \isi{preverbal}, and \isi{postverbal}. Thus, using these two factors,
 logically we can have 36 grammars (9\ensuremath{\times}4). Among
 them, I excluded four grammars which I doubted if such types
@@ -975,9 +974,9 @@ is readily available under the MIT license.}
 \caption{Customized grammars with information structure in 2013}
 \label{tbl:ling567:2013}
 \begin{tabular}{lll}
-\hline
+\lsptoprule
 \textbf{name} & \textbf{ISO 639-3} & \textbf{language family} \\ \hline
-\hline
+\midrule 
 Classical Chinese & [lzh] & Sino-Tibetan\\ 
 (Northern) Frisian$^\ensuremath{\dagger}$ & [frr] & Indo-European\\ 
 Halkomelem & [hur] & Salish\\ 
@@ -985,7 +984,7 @@ Lakota$^\ensuremath{\dagger}$ & [lkt] & Siouan\\
 Miyako$^\ensuremath{\dagger}$ & [mvi] & Japonic\\ 
 Penobscot & [aaq-pen] & Algic\\ 
 Yiddish$^\ensuremath{\dagger}$ & [ydd]	& Indo-European\\ 
-\hline
+\lspbottomrule
 \end{tabular}
 \end{table}
 
@@ -1014,8 +1013,8 @@ structure, and whether there was an adverse effect on grammar
 configuration. Moreover, it is necessary to examine how information
 structure in these languages is articulated and represented.
 \citet{saleem:10} makes use of three types of languages for evaluating
-her ``Argument Optionality'' library: namely pseudo languages,
-illustrative languages, and held-out languages.\is{argument-optionality}
+her ``Argument Optionality'' library, namely pseudo languages,
+illustrative languages, and held-out languages.\is{argument optionality}
 Pseudo languages are hypothetical languages 
 (i.e.\ not human languages) that indicate the
 major properties of language phenomenon that the library developer has
@@ -1055,7 +1054,7 @@ and \tdl{contrast-focus}).\is{semantic focus}\is{contrastive focus}
 (ii) \ili{Yiddish} is also a V2 language,
 and employs focus/\isi{topic}-fronting. That is, focused and topicalized
 constituents occur sentence-initially.\footnote{As surveyed before in
-  \myS{5:sec:fronting} \mypage{5:sec:fronting}, if focus and topic
+  Section \ref{5:sec:fronting} \mypage{5:sec:fronting}, if focus and topic
   contest for the sentence-initial position, topic normally wins.
   However, I have not yet verified if this generalization is
   straightforwardly applied to V2 languages.} Thus, fronted
@@ -1106,15 +1105,15 @@ structure is configured for the language.\is{testsuites}\il{Frisian}\il{Yiddish}
 \caption{\# of test items}
 \label{tbl:lc:testsites}
 \begin{tabular}{lrrr}
-\hline
+\lsptoprule
 \textbf{language} & \textbf{\# of total items} & \textbf{\# of grammatical items}  & \textbf{\# of information-structure}\\
 & & & \textbf{related items} \\ \hline
-\hline
+\midrule
 Frisian & 164 & 109  & 6\\
 Yiddish  & 228 & 150 & 6\\
 Miyako & 102 & 71 & 6\\
 Lakota & 168 & 100 & 2 \\
-\hline
+\lspbottomrule 
 \end{tabular}
 \end{table}
 
@@ -1177,32 +1176,32 @@ newer version performs better.\il{Frisian}\il{Yiddish}\il{Miyako}\il{Yiddish}
 \centering
 \begin{tabular}{lrrr}
 \multicolumn{4}{c}{Table 12.3: Coverage (\%)}\\
-\hline
+\lsptoprule
 \textbf{language} & \textbf{final} & \textbf{old}  & \textbf{new} \\ \hline
-\hline
+\midrule
 Frisian  & 70.6 &  45.0 &  45.0 \\
 Yiddish  & 60.0 &  32.0 &  32.0 \\
 Miyako  & 77.5 &  38.0 &  38.0 \\
 Lakota  & 91.0 &  60.0 &  60.0 \\
-\hline
+\lspbottomrule
 \end{tabular}
 \mbox{ }  \mbox{ } \mbox{ }  \mbox{ } \mbox{ }  
 \begin{tabular}{lrrr}
 \multicolumn{4}{c}{Table 12.4: \# of readings}\\
-\hline
+\lsptoprule
 \textbf{language} & \textbf{final} & \textbf{old}  & \textbf{new} \\ \hline
-\hline
+\midrule
 Frisian  & 178 &  195 &  209 \\
 Yiddish  & 118 &  97 &  98 \\
 Miyako  & 80 &  34 &  34 \\
 Lakota  & 103 & 62 &  62 \\
-\hline
+\lspbottomrule
 \end{tabular}
 \end{table}
 
 
 
-\subsection{Information Structure in the Four Languages}
+\subsection{Information structure in the four languages}
 \label{13:ssec:lc-info}
 
 
@@ -1216,7 +1215,7 @@ coverage over these items and returned correct analyses.
 
 \ili{Frisian}, a V2 language,\is{V2 languages} is specified as placing focused constituents
 in the preverbal position irrespective of \isi{contrastiveness}.\is{\textit{info-str}}  As
-discussed before in \myS{11:ssec:ph}, this language includes
+discussed before in Section \ref{11:ssec:ph}, this language includes
 \tdl{head-nf-comp-phrase-super}, \tdl{nf-comp-head-phrase}, and
 \tdl{narrow-focused-phrase}.\is{narrow focus} The value of \tdl{info-str} that
 \isi{preverbal} foci have is \tdl{focus} which can be used for both
@@ -1280,8 +1279,8 @@ version correctly operated at least with these four languages.
 \section{Live-site}
 \label{11:ssec:livesite}
 
-All the components of the information structure library (e.g.\ (i)
-web-based questionnaire, (ii) the Matrix-core in \isi{TDL}, and (iii) the
+All the components of the information structure library (e.g.\ 
+web-based questionnaire, the Matrix-core in \isi{TDL}, and the
 Python code for validation and customization) were successfully
 implemented in the \lingo \isi{Grammar Matrix} system. The library for
 information structure was added in the live site of the customization

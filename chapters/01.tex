@@ -3,7 +3,7 @@
 \setcounter{enums}{0}
 
 Human languages consist of various structures, among which syntactic
-structure and semantic structure are particularly well-known. The
+structure and semantic structure are particularly well known. The
 present study is primarily concerned with information structure, and
 the ways in which it could be leveraged in natural language processing
 applications.
@@ -29,7 +29,7 @@ different discourse contexts, as exemplified in \myref{exe:intro}.
 
 
 
-\noindent Though the sentences in (\ref{exe:intro}b-c) are constructed
+\noindent Though the sentences in (\ref{exe:intro}b--c) are constructed
 using the same lexical items and describe the same state of affairs as
 sentence (\ref{exe:intro}a), they differ with respect to how
 information is packaged: `Kim' is focused in (\ref{exe:intro}b), while
@@ -47,8 +47,9 @@ meanings and markings is a key component of a well-constructed
 grammar.  For example, the simple \ili{English} sentence
 (\ref{exe:i-am-kim}a) can be translated into at least two
 \ili{Japanese} allosentences (close paraphrases which share
-\isi{truth-conditions} \citep{lambrecht:96}), with the nominative
-marker \ga or with the so-called \isi{topic} (and/or contrast) marker \wa.\is{contrast}
+\isi{truth-conditions}, \citealt{lambrecht:96}), with the nominative
+marker \ga or with the so-called \isi{topic} (and/or contrast) marker
+\wa.\is{contrast}
 
 
 \myexe{\eenumsentence{\label{exe:i-am-kim}
@@ -98,7 +99,7 @@ exploration of information structure.  First, the absence of
 cross-linguistic findings results in less use of the information in
 practical systems.  In order for language processing systems to
 provide more fine-grained results and work truly
-language-independently, acquiring knowledge across languages are
+language-independently, acquiring knowledge across languages is
 required \citep{bender:11}.  Second, distributional findings obtained
 from language data are still insufficient. Several previous studies
 exploit language data for the study of information structure, but use
@@ -133,7 +134,7 @@ contributing to the \lingo \isi{Grammar Matrix} system
 
 
 
-\section{Grammar Engineering}
+\section{Grammar engineering}
 \label{2:sec:grammar-engineering}
 
 
@@ -161,7 +162,7 @@ grammar engineering.\footnote{\citet{balwin:etal:05}, in the context
   conduct an evaluation using the ERG (English Resource Grammar,
   \citealt{flickinger:00}) and the BNC (British National Corpus,
   \citealt{burnard:00}). They substantiate the interaction of two
-  sources of linguistic findings: namely acceptability judgments and
+  sources of linguistic findings, namely acceptability judgments and
   corpus data.}
 
 
@@ -181,26 +182,25 @@ treebanks \citep{oepen:etal:04,bond:etal:06}, and wordnets
 to run on a computer in order to prove its mathematical tractability
 as well as its potential for utilization. The constructed grammar has
 to be reusable for other studies with varied research
-goals.\footnote{\citet{bender:08} offers an explanation about how
+goals.\footnote{\citet[16]{bender:08} offers an explanation about how
   grammar engineering can be used for linguistic hypothesis testing:
   ``[L]anguages are made up of many subsystems with complex
-  interactions. Linguists generally \isi{focus} on just one subsystem at a
-  time, yet the predictions of any particular analysis cannot be
+  interactions. Linguists generally \isi{focus} on just one subsystem
+  at a time, yet the predictions of any particular analysis cannot be
   calculated independently of the interacting subsystems. With
   implemented grammars, the computer can track the effects of all
   aspects of the implementation while the linguist focuses on
-  developing just one.'' (Ibid.\ p.\ 16)} Buidling upon the grammar
-resources, grammar engineering facilitates parsing and generation,
-which can be used for several practical applications such as machine
-translation, grammar checking, information extraction,
-question-answering, etc.
+  developing just one.''} Building upon the grammar resources, grammar
+engineering facilitates parsing and generation, which can be used for
+several practical applications such as machine translation, grammar
+checking, information extraction, question-answering, etc.
 
 
 
 
 Within the field of grammar engineering, there are several competing
 theories of grammar, including \isi{HPSG}, \isi{LFG}
-(Lexical-Functional Grammar (\citealt{bresnan:01})), \isi{CCG}
+(Lexical-Functional Grammar, \citealt{bresnan:01}), \isi{CCG}
 (Combinatory Categorial Grammar, \citealt{steedman:01}), and \isi{TAG}
 (Tree-Adjoining Grammar, \citealt{joshi:schabes:97}). HPSG, which
 employs typed feature structures as a mathematical foundation, has
@@ -226,20 +226,20 @@ repository (\myurl{http://moin.delph-in.net/LogonTop}).\footnote{Note
   that not all DELPH-IN resources are in the \logon repository. For
   example, the collection of \textit{Language CoLLAGE} is not in the
   repository, but is readily available \citep{bender:14}.} \logon
-includes a collection of computational grammars (e.g.\ \isi{ERG} for
+includes a collection of computational grammars, e.g.,\ \isi{ERG} for
 English (\citealt{flickinger:00}), \isi{Jacy} for \ili{Japanese}
-(\citealt{siegel:bender:02}), \isi{KRG} for \ili{Korean}
+(\citealt{siegel:etal:16}), \isi{KRG} for \ili{Korean}
 (\citealt{kim:etal:11}), \isi{GG} for \ili{German}
 (\citealt{crysmann:03,crysmann:05a,crysmann:05b}), \isi{SRG} for
 \ili{Spanish} (\citealt{marimon:12}), \isi{LXGram} for
 \ili{Portuguese} (\citealt{branco:costa:10}), \isi{Norsource} for
 \ili{Norwegian} (\citealt{hellan:05}), \isi{BURGER} for
-\ili{Bulgarian} (\citealt{osenova:11}), ZHONG \ensuremath{[\big|]} for
+\ili{Bulgarian} (\citealt{osenova:11}), ZHONG for
 the \ili{Chinese} languages (\citealt{fan:15a,fan:15b}),\is{ZHONG}
 \isi{INDRA} for \ili{Indonesian} (\citealt{moeljadi:15}), and so
-forth), processors (e.g.\ \isi{\lkb}~(\citealt{copestake:02}),
-\isi{\pet}~(\citealt{callmeier:00}), etc.), and other software
-packages (e.g.\ \isi{\itsdb} (\citealt{oepen:01})).
+forth, processors, e.g., \isi{\lkb}~(\citealt{copestake:02}),
+\isi{\pet}~(\citealt{callmeier:00}), etc., and other software
+packages, e.g.,\ \isi{\itsdb} (\citealt{oepen:01}).
 
 
 
@@ -249,7 +249,7 @@ One of the major projects under the DELPH-IN consortium is the \lingo
 Grammar Matrix (\citealt{bender:etal:10}).  The \lingo Grammar Matrix
 customization system is an open source starter kit for the rapid
 development of HPSG/MRS-based grammars
-(\myurl{http://www.delph-in.net/matrix/customize)}).  The grammars
+(\myurl{http://www.delph-in.net/matrix/customize}).  The grammars
 created by the system are to be rule-based, scalable to
 broad-coverage, and cross-linguistically comparable. The main idea
 behind the system is that the common architecture simplifies exchange
@@ -277,9 +277,9 @@ evaluations.
 \label{1:sec:outlines}
 
 This book is divided into three parts, dedicated to exploring
-solutions to each of the problems mentioned in \myS{1:sec:motivations}
+solutions to each of the problems mentioned in Section \ref{1:sec:motivations}
 individually from a perspective of grammar engineering
-(\myS{2:sec:grammar-engineering}).
+(Section \ref{2:sec:grammar-engineering}).
 
 
 The first part explores various information structure meanings and
@@ -291,7 +291,7 @@ systems. Building on this initial work and additional evidence, a more
 cross-linguistically valid explanation of information structure is
 provided. Chapter~\ref{chapter3} lays out the meanings each component
 of information structure conveys, and Chapter~\ref{chapter4} looks
-into three forms of expressing information structure: namely prosody,
+into three forms of expressing information structure, namely prosody,
 lexical markings, and sentence position.  Chapter~\ref{chapter5}
 discusses the discrepancies in meaning-form mapping of information
 structure.
@@ -306,7 +306,7 @@ Chapter~\ref{chapter8}.  After that, I propose the definition of a new
 constraint type and feature hierarchy for modeling information
 structure in HPSG/MRS. \isi{ICONS} (mnemonic for \isi{Individual
   CONStraints}) is presented as an extension to MRS in
-Chapter~\ref{chapter9} and~\ref{chapter10}.  Chapter~\ref{chapter9}
+Chapters~\ref{chapter9} and~\ref{chapter10}.  Chapter~\ref{chapter9}
 presents the fundamentals of representing information structure via
 ICONS, and Chapter~\ref{chapter10} goes into the particulars of how
 ICONS works with some sample derivations.  Chapter~\ref{chapter10-2}

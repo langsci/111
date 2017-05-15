@@ -1,6 +1,8 @@
-d .RM = /bin/rm -f
-
 all:
+	./create_pdf.sh avr-eng
+	./create_pdf.sh avr-jpn
+	./create_pdf.sh avr-kor
+	./create_pdf.sh avr-total
 	./create_pdf.sh tdl-config
 	./create_pdf.sh laet-sobaka
 	./create_pdf.sh habla
@@ -255,16 +257,19 @@ all:
 	./create_pdf.sh who-comes-3
 	./create_pdf.sh wide-focus
 	./create_pdf.sh copula-verb-lex
-#	./create_pdf.sh kappa
-#	./create_pdf.sh kappa2
-#	./create_pdf.sh kappa3
-#	./create_pdf.sh kappa4
-#	./create_pdf.sh kappa-spa
-#	./create_pdf.sh kappa-rus
-#	./create_pdf.sh kappa-kor
-#	pdflatex comparison.tex
-#	pdfcrop comparison.pdf
-#	mv comparison-crop.pdf comparison.pdf
+	./create_pdf.sh kappa
+	./create_pdf.sh kappa2
+	./create_pdf.sh kappa3
+	./create_pdf.sh kappa4
+	./create_pdf.sh kappa-spa
+	./create_pdf.sh kappa-rus
+	./create_pdf.sh kappa-kor
+	pdflatex comparison.tex
+	pdfcrop comparison.pdf
+	mv comparison-crop.pdf comparison.pdf
+	pdflatex comparison2.tex
+	pdfcrop comparison2.pdf
+	mv comparison2-crop.pdf comparison2.pdf	
 	rm -f *.log
 	rm -f *.aux
 	rm -f *.dvi
