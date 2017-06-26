@@ -466,7 +466,7 @@ semantic head within a single clause.
 \noindent Some lexical types inherently include an \tdl{info-str}
 value.\is{\textit{info-str}} In this case, lexical types for ARG-ST
 impose a constraint on the element of \tdl{info-str}.  For instance,
-the type \tdl{clausal-second-arg-trans-lex-item}, which is reponsible
+the type \tdl{clausal-second-arg-trans-lex-item}, which is responsible
 for the AGT-ST of verb classes which take a clausal complement
 (e.g.\ \textit{think}, \textit{ask}), is defined as shown in
 (\ref{tdl-one-icons-lex-item:b}) (see Section \ref{10:ssec:embedded}).  Note
@@ -602,7 +602,7 @@ lexical rule inherits from \tdl{no-rels-hcons-rule} (explained before
 in (Section \ref{11:ssec:lr}) and introduces an element of \tdl{info-str} into
 C-CONT{$\mid$}ICONS.\is{\textit{info-str}} Otherwise, it inherits just
 from \tdl{add-only-no-ccont-rule} (or other lexical rules with an
-empty C-CONT{$\mid$}ICONS). For instance, theree TDL statements
+empty C-CONT{$\mid$}ICONS). For instance, the TDL statements
 presented in \myref{tdl:affix} are responsible for a focus-marking
 suffix, and introduces a value of \tdl{info-str} into ICONS. Note the
 two coreference tags in \tdl{add-icons-rule}, namely \#icons and
@@ -779,7 +779,7 @@ constrained with respect to information structure roles
 flag feature INFOSTR-FLAG is also used, because arguments ex
 situ introduce an \tdl{info-str} element into \isi{ICONS} while
 arguments in situ do not. INFOSTR-FLAG serves to make a
-distinction between them. That is, this strategy is almost the same to
+distinction between them. That is, this strategy is almost the same as
 that in languages that employ a \isi{fixed word order} and place
 focused constituents in the \isi{preverbal} or \isi{postverbal}
 position. The same goes for V2 languages.\is{V2 languages}  If a language employs the
@@ -894,7 +894,7 @@ against.\is{regression test}
 
 
 
-I created 46 pseudo grammars (i.e.\ 46 choices files) for regression
+I created 46 pseudo grammars (i.e.\ 46 \texttt{choices} files) for regression
 tests of the ``Information Structure'' library.\is{pseudo grammars}
 These grammars are representative of a range of information structure
 marking in human language.
@@ -918,7 +918,7 @@ least in v-final and v-initial languages. Note that the present work
 does not use \tdl{head-filler-phrase} for these languages.  For
 example, \ili{Korean} is a v-final language and employs right
 dislocation \citep{kim:11}, but the constructions do not seem to be
-\tdl{head-filler-phrase}. The excluded ones include
+\tdl{head-filler-phrases}. The excluded ones include
 \texttt{infostr-foc-vf-final}, \texttt{infostr-foc-vf-postv},
 \texttt{infostr-foc-vi-initial}, and \texttt{infostr-foc-vi-prev}.
 Thus, I developed 32 grammars. This subgroup is called TYPE A.
@@ -942,9 +942,10 @@ The third step is running the regression tests.\footnote{The processor
   for the regression test was {\isi{\lkb}} previously, but I modified
   the script to run with \isi{\ace}. Because there were some minor
   mismatches in representation between \isi{\lkb} and \isi{\ace}, some
-  gold profiles used in the regression test were altered.}  I ran the
-whole previous choices files created for regression test without
-considering ICONS.  After getting 100\% of matches using the previous
+  gold profiles used in the regression test were altered.}  I ran a series of 
+regression tests with the \texttt{choices} files 
+which were previously created without considering ICONS.
+After getting 100\% of matches using the previous
 testsuites, then I created new gold profiles with \isi{ICONS} using
 \isi{\ace}~(\myurl{http://sweaglesw.org/linguistics/ace}).  The newly
 created profiles were manually checked to make sure the \isi{ICONS}
@@ -989,7 +990,7 @@ Yiddish$^\ensuremath{\dagger}$ & [ydd]	& Indo-European\\
 \end{table}
 
 
-The grammars have been created in fulfillment of a \isi{grammar engineering}
+The grammars were created in fulfillment of a \isi{grammar engineering}
 course in the Department of Linguistics at the University of
 Washington, Linguistics 567
 (\myurl{http://courses.washington.edu/ling567}, \citealt{bender:07}).
@@ -1160,7 +1161,7 @@ place constraints on syntactic positioning of marking information
 structure.\is{syntactic positioning} In particular, one of the main
 components that I refined in the newer version is a routine that deals
 with narrow foci in V2 languages.\is{V2 languages} In fact, the old version had a
-vunerability in constraining narrow foci in V2 languages, and
+vulnerability in constraining narrow foci in V2 languages, and
 syntactic composition did not work well.\is{narrow focus}  As shown in the third and
 fourth column of Table 12.4, the numbers of parse trees produced by
 the grammars in \ili{Miyako} and \ili{Lakota} are the same, while

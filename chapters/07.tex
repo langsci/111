@@ -106,7 +106,7 @@ argument which serves as the subject in raising and control
 constructions.\is{raising predicate}\is{control predicate}
 Third, REL is a bag of EPs (Elementary Predicates),
 whose type is a \tdl{relation}. Each \tdl{relation} has at least three
-attributes: LBL (Label), PR ED (Predicate), and ARG0 (ARGument
+attributes: LBL (Label), PRED (Predicate), and ARG0 (ARGument
 \#0). The value of LBL is a \tdl{handle}, which represents the current
 EP. The value of PRED is normally a string, such as
 ``\_dog\_n\_1\_rel'', ``\_bark\_v\_rel'', etc.\footnote{The PRED value can
@@ -145,7 +145,7 @@ representation DMRS deploys is introduced for ease of explication.
 The use of \isi{ICONS} is motivated by three necessities; (i)
 resolving discrepancies between forms and meanings in information
 structure, (ii) facilitating underspecifiability in order to allow for
-flexible and partial constraints, and (iii) capturing the fact that
+flexible and partial constraints, and (iii) capturing the 
 information structure relations between expressions and particular
 clauses.  To these, I add a working hypothesis to facilitate (iv)
 informative emptiness in representing information structure.
@@ -269,7 +269,7 @@ focus role. Hence, the semantic representation of \textit{kafe} in
 (\ref{exe:greek:2}a) has to cover all those potential meanings
 simultaneously (i.e.\ \tdl{non-topic} in the present study).  On the
 other hand, the \isi{preverbal} focus in (\ref{exe:greek:2}b)
-(ex situ) presents a clue indentifying its information
+(ex situ) presents a clue identifying its information
 structure meaning.  In other words, \textit{kafe} in
 (\ref{exe:greek:2}b) is constructionally marked and thereby conveys a
 more specific meaning than that in (\ref{exe:greek:2}a) and it can no
@@ -286,7 +286,7 @@ reading (i.e.\ \tdl{focus} as the supertype of both
 
 
 Third, using \isi{ICONS} is motivated by the necessity of finding
-binary relations between a clause and an element uses in the
+binary relations between a clause and an element used in the
 construction of MRSs\is{MRS} that belongs to the clause. These binary
 relations are crucial in representing the information structure of
 various types of utterances.  The typed feature structure of ICONS
@@ -298,7 +298,7 @@ Information structure roles can be represented not as a property of
 the constituent itself, but as a relationship that holds between the
 clause and the constituent it belongs to. For example, in the \ili{English}
 sentence \textit{The \textsc{dog} barks.}, the subject \textit{the
-  \textsc{dog}} with the A-accent should be viewed as the the \isi{focus} of
+  \textsc{dog}} with the A-accent should be viewed as the \isi{focus} of
 the clause headed by the predicate \textit{barks}, rather than as
 simply focused.  This approach is in line with \citet{lambrecht:96}
 and \citet{engdahl:vallduvi:96} who regard information structure as a
@@ -385,7 +385,7 @@ expressing any other information structure meanings, either.  For this
 reason, the present study presents a working hypothesis that
 semantically empty categories (e.g.\ complementizers, expletives) and
 syncategorematic items\footnote{Syncategorematic items refer to words
-  that cannot serve as the main syntactic cateogory of human language
+  that cannot serve as the main syntactic category of human language
   sentences, such as the subject (in the matrix clause) and the
   predicate.  \citet{lambrecht:96} does not capture any generalization
   about them, but I argue that they cannot be used as topic, either.}
@@ -647,7 +647,7 @@ case, the verb \textit{reads} plays the role as indicated by
 meanings are built up incrementally by lexical and phrasal rules with
 an interaction of the type hierarchies. In this case, the rules for
 identifying each information structure value are (hypothetical)
-lexical rules that constraining the A and B accents.  When a specific
+lexical rules that constrain the A and B accents.  When a specific
 \tdl{info-str} value is created by such a rule, this value is gathered
 up to the tree via \tdl{diff-list} \mypage{tdl:diff-list}.
 
@@ -712,7 +712,7 @@ clause an individual is overtly expressed in is chosen.\footnote{This
   strategy is different from the approach presented in
   \citet{song:bender:12}, in which \tdl{verbal-lex} and
   \tdl{headed-icons-phrase} take the responsibility of linking
-  CLAUSE-KEY to the INDEX of heads. The main reason of the change in
+  CLAUSE-KEY to the INDEX of heads. The main reason for the change in
   strategy is that using \tdl{headed-icons-phrase} ends up with
   introducing too many subtypes of
   \tdl{head-comp-phrase}.\is{CLAUSE-KEY} This runs against the spirit
@@ -827,7 +827,7 @@ As discussed thus far, in order to see the larger picture of how
 information is packaged in an utterance, it is necessary to look at
 (i) which element has (ii) which information structure relation to
 (iii) which clause. In particular, if an utterance is made up of two
-or more clauses, single entity can have an information structure
+or more clauses, a single entity can have an information structure
 relation (e.g\ \isi{topic}, \isi{focus}, and so on) with each clause, and those
 relations are not necessarily the
 same.\is{\textit{info-str}}\is{binary relation} Leveraging binary
@@ -971,7 +971,7 @@ information structure markings are neither a necessary condition nor a
 sufficient condition for information structure meanings.  Second, the
 MKG value of \wa and \nun may be either \tdl{tp} or a fully specified
 type such as \tdl{tp-only}. The present study supports the former,
-because contrastively used markers and non-contrastive used ones show
+because contrastively used markers and non-contrastively used ones show
 different prosodic behavior from each other in \ili{Korean} and
 \ili{Japanese} \citep{chang:02,nakanishi:07}.  For example, as already
 provided in Chapter~\ref{chapter8} \mypage{avm:chang:tf},
@@ -1000,7 +1000,7 @@ system for detecting prosody in Japanese and Korean, to my knowledge,
 is non-existent for now.  The value of MKG{$\mid$}FC of the topic
 markers, therefore should (and does) remain underspecified in the
 current work.  Finally, null-marked phrases in Japanese and Korean
-should be evaluated as remaining underdetermined with respect to
+should be evaluated as remaining undetermined with respect to
 information structure markings
 (i.e.\ \tdl{unmkg}).\is{underspecification}
 
@@ -1014,7 +1014,7 @@ assume that prosody expressing \isi{focus} is responsible for
 spreading the meaning of focus to larger constituents
 \citep{bildhauer:07}.  However, focus is projected onto larger phrases
 not only by means of prosody but also by lexical markers in some cases
-\citep{choe:02}.\is{lexical markers} The feature responsibe for
+\citep{choe:02}.\is{lexical markers} The feature responsible for
 \isi{focus projection} in the current proposal is \mbox{[MKG{$\mid$}FC
     +]}.\footnote{The A-accent in \ili{English} and the prosodic
   pattern of marking focus in \ili{Spanish} inherently have
@@ -1310,7 +1310,7 @@ between HEAD-DTR and NON-HEAD-DTR cannot be used for constraining
 clefts behave as the head of cleft clauses realized as
 relatives.\is{clefting} In other words, while the focused items in
 [OV/VO] in Language \textit{A} and \textit{B} respectively are
-non-head-daughters, the focused items in cleft are head-daughters. In
+NON-HEAD-DTRs, the focused items in cleft are HEAD-DTRs. In
 a nutshell, it is true that \tdl{narrow-focus} and \tdl{focus-bg}
 require some constraints on information structure marking and meaning,
 but the constraints must be applied on a language by language or
@@ -1342,7 +1342,7 @@ clauses, as exemplified in \myref{exe:kor:cleft:apple:7}.\is{clefting}
 transmit the MKG value of the subject in the cleft clause to the
 higher phrase node, then only the nominative marker that involves [MKG
   \tdl{unmkg}] can be chosen.  The [MKG \tdl{tp}] feature \nun
-involves prevents the clause from being used in the clefte clause (see
+involves prevents the clause from being used in the clefted clause (see
 Section \ref{9:ssec:jpn:kor}).
 
 
@@ -1442,7 +1442,7 @@ In \ili{English}, while left-dislocated NPs cannot occur more than
 once without affecting grammaticality as shown in
 (\ref{exe:multiple-topic:eng:2}a),\footnote{This generalization is
   language-specific, not universal.  Some counterexamples have been
-  reported: \citet[123]{vallduvi:93} argues on \ili{Catalan} that
+  reported: \citet[123]{vallduvi:93} argues for \ili{Catalan} that
   ``There is no structural restriction on the number of phrases that
   may be right or left detached.''  Left-dislocated NPs in
   \ili{Spanish} are also sometimes multiply used
