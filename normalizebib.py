@@ -2,13 +2,30 @@ import sys
 import re
 import pprint
 import glob
-
+from helpers import INITD, REPLACEMENTS, LANGUAGENAMES, OCEANNAMES, COUNTRIES, CONTINENTNAMES, CITIES, OCCURREDREPLACEMENTS
+import string
+ 
 keys = {} #store for all bibtex keys
 excludefields = ['language'] #fields not to output
 
+#prepare translation table for removing non-ASCII
+orig = ''
+trans = ''
+for k in INITD:
+  s = INITD[k]
+  for c in s:
+    orig+=c
+    trans+=k
+transtable = str.maketrans(orig, trans)
+
+PRESERVATIONPATTERN = re.compile(r"\b(%s)\b"%('|'.join(LANGUAGENAMES+COUNTRIES+OCEANNAMES+CONTINENTNAMES+CITIES+OCCURREDREPLACEMENTS)))    
+CONFERENCEPATTERN = re.compile("([A-Z][^ ]*[A-Z][A-Z-a-z]*)") #Binnenmajuskeln should be kept
+PROCEEDINGSPATTERN = re.compile("((?:Proceedings|Workshop|Conference|Symposium).*)\}$") #Binnenmajuskeln should be kept
+
+
 class Record(): 
   """
-  A bitex record
+  A bibtex record
   """
 
   TYPKEYFIELDS = r"^([^\{]+)\{([^,]+),[\s\n\t]*((?:.|\n)*)\}"
@@ -24,13 +41,16 @@ class Record():
     """
     
     #analyze first line
-    m = re.match(self.TYPKEYFIELDS,s)
-    self.typ = m.group(1).lower()
+    m = re.match(self.TYPKEYFIELDS,s) 
+    try:
+      self.typ = m.group(1).lower()
+    except AttributeError:
+      return
     self.key = m.group(2)
     
     #analyze remainder
     try: 
-      self.fields = dict((tp[0].strip()\
+      self.fields = dict((tp[0].strip().lower()\
           .replace('\n',' ')\
           .replace('\t',' '),
           tp[1].strip()\
@@ -43,7 +63,7 @@ class Record():
         ]
             )
     except IndexError:
-      print(s)
+      print(s) 
     #store keys 
     self.inkeysd = inkeysd
     self.restrict = restrict
@@ -51,7 +71,7 @@ class Record():
     if self.key in keys:
       self.errors.append("duplicate key %s"% self.key)
     keys[self.key] = True
-    self.conform()
+    self.conform() 
     self.report()
     
   def conform(self):
@@ -66,15 +86,18 @@ class Record():
         self.errors.append("neither title nor booktitle")
     pages = self.fields.get('pages')
     if pages != None: 
-      self.fields['pages'] = re.sub(r'([0-9])-([0-9])',r'\1--\2',pages)		 
+      self.fields['pages'] = re.sub(r'([0-9])-([0-9])',r'\1--\2',pages)                 
     self.conformsubtitles() 
     self.conforminitials()
     self.checkand()
+    self.checkedition()
     self.checkurl()
+    self.checkurldate()
     self.checkquestionmarks()
     self.checkarticle()
     self.checkbook()
     self.checkincollection()
+    self.checklanguagenames()
   
   def report(self):
     """
@@ -92,6 +115,50 @@ class Record():
     """
     
     return match.group(1) + ' {' +match.group(2).upper()+'}'
+
+  def checklanguagenames(self):
+    ts = ['title','booktitle']
+    for t in ts:
+      try: 
+        oldt = self.fields.get(t,'') 
+        preservationt = oldt
+        m = PRESERVATIONPATTERN.search(preservationt)
+        if m:
+          for g in m.groups():
+            preservationt = preservationt.replace(g,"{%s}"%g)
+            if oldt != preservationt: 
+              #print(oldt,' ==> ',preservationt)
+              self.fields[t] = preservationt
+      except AttributeError:
+        pass            
+      try:   
+        oldt = self.fields.get(t,'') 
+        conft = oldt
+        m = CONFERENCEPATTERN.search(conft)
+        if m:
+          for g in m.groups():
+            conft = conft.replace(g,"{%s}"%g)
+            if oldt != conft: 
+              #print(oldt,' ==> ',conft)
+              self.fields[t] = conft
+      except AttributeError:
+        pass
+            
+            
+      try:   
+        oldt = self.fields.get(t,'') 
+        proct = oldt
+        m = PROCEEDINGSPATTERN.search(proct)
+        if m:
+          for g in m.groups():
+            proct = proct.replace(g,"{%s}"%g)
+            if oldt != proct: 
+              #print(oldt,' ==> ',proct)
+              self.fields[t] = proct
+      except AttributeError:
+        pass
+          
+                
 
  
       
@@ -125,13 +192,40 @@ class Record():
         if commas > ands +1:
           self.errors.append("problem with commas in %s: %s"% (t,self.fields[t]))
           
+  def checkedition(self):
+    """
+    check for the correct formatting of the edition field
+    """
+    
+    edn =  self.fields.get('edition')
+    if edn:
+      edn = edn.replace('{','').replace('}','').replace('"','').strip()
+      try:
+        int(edn)
+      except ValueError:
+          self.errors.append("incorrect format for edition: %s"% (edn))
+          
   def checkurl(self): 
     """
     make sure the url field contains the url and only the url
     """
-    
+    url = self.fields.get('url','')
     if self.fields.get('url','').count(' ')>0:
       self.errors.append("space in url")
+    nonsites = ('ebrary','degruyter','doi','myilibrary','academia','ebscohost')
+    for n in nonsites:
+      if n in url:
+        self.errors.append("%s: urls should only be given for true repositories or for material not available elsewhere"%url)
+                
+  def checkurldate(self): 
+    """
+    make sure the urldate field is only present when an url is actually given
+    """
+    
+    if self.fields.get('urldate') != None:
+      if self.fields.get('url') == None:
+        self.errors.append("urldate without url")
+      
           
   def checkbook(self):
     """
@@ -140,6 +234,19 @@ class Record():
     
     if self.typ != 'book':
       return 
+    if not self.fields.get('address'):      
+      publisher = self.fields.get('publisher','') 
+      if "John Benjamins" in publisher:
+        self.fields['address'] = "Amsterdam"
+        0/0
+      elif "Cambridge" in publisher or "CUP" in publisher :
+        self.fields['publisher'] = "Cambridge"
+      elif "Oxford" in publisher or "OUP" in publisher :
+        self.fields['publisher'] = "Oxford"
+      elif "Blackwell" in publisher or "Routledge" in publisher :
+        self.fields['publisher'] = "London"
+      elif "Gruyter" in publisher or "Mouton" in publisher :
+        self.fields['publisher'] = "Berlin"
     mandatory = ('year', 'title', 'address', 'publisher')
     for m in mandatory:
       self.handleerror(m)
@@ -155,13 +262,37 @@ class Record():
           self.fields['number'] = volume
           del self.fields['volume'] 
     #books should have either author or editor, but not both or none
-    if self.fields.get('author') ==  None:
-      if  self.fields.get('editor') ==  None:
-        self.errors.append("neither author nor editor")        
-    if self.fields.get('author') !=  None:
-      if  self.fields.get('editor') !=  None:
+    auth = self.fields.get('author')
+    ed = self.fields.get('editor')     
+    if auth:
+      if ed:
         self.errors.append("both author and editor")
-        
+      else:
+        self.addsortname(auth)
+    elif ed:
+      self.addsortname(ed)
+    else:
+      self.errors.append("neither author nor editor")        
+      
+  def addsortname(self,name):
+    #print(name)
+    residue = name.translate({ord(i):None for i in string.ascii_letters+'- ,{}'})
+    if residue == '':
+      pass
+    else:
+      #print(residue)
+      sortname = name
+      #remove legacy diacritics
+      replacements="""'"`~vk=^"""
+      for r in replacements:
+        s = '\\%s'%r 
+        sortname = sortname.replace(s,'')
+      #replace higher Unicode with nearest low ASCII equivalent
+      sortname = sortname.translate(transtable) 
+      #update fields 
+      self.fields['sortname'] = sortname
+      
+
       
   def checkarticle(self):
     """
@@ -172,6 +303,13 @@ class Record():
     mandatory = ('author', 'year', 'title', 'journal', 'volume', 'pages') 
     for m in mandatory:
       self.handleerror(m)
+    if self.fields.get('pages') == None: #only check for pages if no electronic journal
+      if self.fields.get('url') == None:
+        self.fields['pages'] = r"{\biberror{no pages}}"
+        self.errors.append("missing pages")  
+    auth = self.fields.get('author')
+    if auth:
+      self.addsortname(auth)
       
   def checkincollection(self):
     """
@@ -179,15 +317,43 @@ class Record():
     """
     if self.typ != 'incollection':
       return 
-    mandatory = ('author', 'year', 'title', 'pages')
+    
+    if not self.fields.get('address'):      
+      publisher = self.fields.get('publisher','') 
+      if "John Benjamins" in publisher:
+        self.fields['address'] = "{Amsterdam}" 
+      elif "Cambridge" in publisher or "CUP" in publisher :
+        self.fields['address'] = "{Cambridge}"
+      elif "Oxford" in publisher or "OUP" in publisher :
+        self.fields['address'] = "{Oxford}"
+      elif "Blackwell" in publisher or "Routledge" in publisher :
+        self.fields['address'] = "{London}"
+      elif "Gruyter" in publisher or "Mouton" in publisher :
+        self.fields['address'] = "{Berlin}"
+      elif "Wiley" in publisher:
+        self.fields['address'] = "{Hoboken}"
+    mandatory = ('author', 'year', 'title')
     for m in mandatory:
-      self.handleerror(m)
+      self.handleerror(m)      
+    if self.fields.get('pages') == None: #only check for pages if no electronic journal
+      if self.fields.get('url') == None:
+        self.fields['pages'] = r"{\biberror{no pages}}"
+        self.errors.append("missing pages")  
+    auth = self.fields.get('author')
+    if auth:
+      self.addsortname(auth)
     if self.fields.get('crossref'):
       #the content is available in the crossref'd record
       return
-    mandatory2 = ('booktitle', 'editor', 'publisher', 'address')
+    mandatory2 = ['booktitle']
     for m2 in mandatory2:
       self.handleerror(m2)
+    if "proceedings" in self.fields.get('booktitle').lower():
+      #proceedings often do note have editor, publisher, or address
+      return
+    mandatory3 = ('editor', 'publisher', 'address')
+    for m3 in mandatory3:
+      self.handleerror(m3)
       
   def checkquestionmarks(self):
     """
@@ -208,7 +374,7 @@ class Record():
       self.fields[m] = r"{\biberror{no %s}}" % m
       self.errors.append("missing %s"%m) 
       
-		
+                
     
     
   def bibtex(self): 
