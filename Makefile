@@ -19,7 +19,7 @@ main.aux: $(SOURCE)
 #create only the book
 main.bbl:  $(SOURCE) localbibliography.bib  
 	xelatex -no-pdf main 
-	bibtex -min-crossrefs=200 main 
+	biber   main 
 
 
 main.snd: main.bbl
