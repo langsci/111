@@ -96,7 +96,7 @@
 	\renewcommand{\lsISSN}{2364-6209} 
 \fi	
 \ifx\lsSeries\tgdi
-	\newcommand{\lsSeriesTitle}{Topics at the Discourse Grammar Interface~\lsSeriesNumber}
+	\newcommand{\lsSeriesTitle}{Topics at the Grammar-Discourse Interface~\lsSeriesNumber}
 	\newcommand{\lsSeriesColor}{lsMidDarkBlue}
 \fi
 \ifx\lsSeries\tmnlp
