@@ -1231,7 +1231,7 @@ is, or will remain, accurate or appropriate.
 \newcommand\nextToken\relax
 
 \renewcommand\footnote[1]{%
-\oldFootnote{\xspace#1}\futurelet\nextToken\isFootnote}
+\oldFootnote{#1}\futurelet\nextToken\isFootnote}
 
 \newcommand\isFootnote{%
 \ifx\footnote\nextToken\textsuperscript{,}\fi}
