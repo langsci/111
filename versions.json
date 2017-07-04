@@ -1,8 +1,13 @@
 {
   "versions": [{
-    "versiontype": "proofreading",
+    "versiontype": "first_edition",
     "title": "Modeling information structure in a cross-linguistic perspective",
     "authors": [{"name": "Sanghoun Song"}],
+    "publishedAt": "2017-07-04T00:00:33.000Z"
+  },{
+    "versiontype": "proofreading",
+    "title": "Modeling information structure in a cross-linguistic perspective",
+    "authors": [{"name": "Sanghoun Song"}], 
     "publishedAt": "2017-03-13T00:00:33.000Z"
   }]
 }
